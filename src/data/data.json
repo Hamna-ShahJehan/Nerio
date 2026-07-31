@@ -1,0 +1,247 @@
+{
+  "hero": {
+    "featured": {
+      "category": { "label": "Sports", "color": "#e033e0" },
+      "title": "Breaking sports news faster than ever",
+      "href": "#",
+      "author": "Matt Rosnor",
+      "views": "151 Views",
+      "date": "November 11, 2025",
+      "buttonText": "Read Article"
+    },
+    "featuredCards": [
+      { "category": { "label": "Esports", "color": "#f27100" }, "title": "Local football club strengthens playoff", "href": "#", "author": "Matt Rosnor", "views": "98", "image": "/assets/images/hero/recent-1.jpg" },
+      { "category": { "label": "Tennis", "color": "#ff3a3a" }, "title": "Veteran cricket bowler announces return", "href": "#", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/hero/recent-2.jpg" }
+    ],
+    "recentNews": {
+      "heading": "Recent News",
+      "viewAllText": "View All",
+      "viewAllHref": "#",
+      "posts": [
+        { "category": { "label": "Esports", "color": "#f27100" }, "title": "Local football club strengthens playoff", "href": "#", "author": "Matt Rosnor", "views": "98", "image": "/assets/images/hero/recent-1.jpg" },
+        { "category": { "label": "Tennis", "color": "#ff3a3a" }, "title": "Veteran cricket bowler announces return", "href": "#", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/hero/recent-2.jpg" },
+        { "category": { "label": "Hockey", "color": "#00b5ed" }, "title": "Marathon runner breaks personal best", "href": "#", "author": "Matt Rosnor", "views": "79", "image": "/assets/images/hero/recent-3.jpg" },
+        { "category": { "label": "Athletics", "color": "#e033e0" }, "title": "Coach expresses confidence in young", "href": "#", "author": "Matt Rosnor", "views": "46", "image": "/assets/images/hero/recent-4.jpg" },
+        { "category": { "label": "Football", "color": "#f69c00" }, "title": "Fans celebrate dramatic final minute", "href": "#", "author": "Matt Rosnor", "views": "53", "image": "/assets/images/hero/recent-5.jpg" }
+      ]
+    }
+  },
+  "breakingNews": {
+    "heading": "Breaking News",
+    "viewAllText": "View All",
+    "viewAllHref": "#",
+    "featured": {
+      "category": { "label": "Esports", "color": "#f27100" },
+      "title": "Cycling team prepares rigorous training schedule for upcoming tour aiming to improve endurance and teamwork",
+      "href": "#",
+      "author": "Matt Rosnor",
+      "views": "108 Views",
+      "date": "October 2, 2025",
+      "image": "/assets/images/breaking/featured-1.jpg"
+    },
+    "sidePosts": [
+      { "category": { "label": "Hockey", "color": "#00b5ed" }, "title": "New goalkeeper impresses with key saves helping the team", "href": "#", "author": "Matt Rosnor", "views": "43", "image": "/assets/images/breaking/side-1.jpg" },
+      { "category": { "label": "Cricket", "color": "#0073ff" }, "title": "National volleyball side continues winning streak showing improved", "href": "#", "author": "Matt Rosnor", "views": "66", "image": "/assets/images/breaking/side-2.jpg" },
+      { "category": { "label": "Football", "color": "#f69c00" }, "title": "Star swimmer sets new national record while inspiring", "href": "#", "author": "Matt Rosnor", "views": "64", "image": "/assets/images/breaking/side-3.jpg" }
+    ],
+    "sliderPosts": [
+      { "category": { "label": "Basketball", "color": "#00c853" }, "title": "Indoor hockey squad celebrates breakthrough win that marks", "href": "#", "author": "Matt Rosnor", "views": "63", "date": "October 2, 2025", "image": "/assets/images/breaking/slider-1.jpg" },
+      { "category": { "label": "Esports", "color": "#f27100" }, "title": "Boxing champion defends title after intense bout showcasing", "href": "#", "author": "Matt Rosnor", "views": "69", "date": "October 2, 2025", "image": "/assets/images/breaking/slider-2.jpg" },
+      { "category": { "label": "Sports", "color": "#e033e0" }, "title": "Local stadium sees record attendance as spectators gather to support", "href": "#", "author": "Matt Rosnor", "views": "41", "date": "October 2, 2025", "image": "/assets/images/breaking/slider-3.jpg" }
+    ]
+  },
+  "site": {
+    "title": "Sports News",
+    "description": "Your daily dose of sports updates",
+    "logo": "/assets/images/logo.png",
+    "favicon": "/favicon.png"
+  },
+  "navigation": {
+    "primary": [
+      { "label": "Home", "href": "/" },
+      {
+        "label": "Features",
+        "href": "#",
+        "hasMegaMenu": true,
+        "children": [
+          { "label": "Wrestling team shows determination and grit", "href": "#" },
+          { "label": "Fans celebrate dramatic final minute goal", "href": "#" },
+          { "label": "Star swimmer sets new national record", "href": "#" },
+          { "label": "Table tennis prodigy stuns expert", "href": "#" },
+          { "label": "Rugby captain praises teammates unity", "href": "#" },
+          { "label": "National tennis champion advances to finals", "href": "#" }
+        ]
+      },
+      {
+        "label": "Sports",
+        "href": "#",
+        "hasMegaMenu": true,
+        "children": [
+          { "label": "Breaking sports news faster than ever", "href": "#" },
+          { "label": "Star striker leads late comeback", "href": "#" },
+          { "label": "Local stadium sees record attendance", "href": "#" },
+          { "label": "Track and field athletes continue preparations", "href": "#" }
+        ]
+      },
+      {
+        "label": "Pages",
+        "href": "#",
+        "hasSubMenu": true,
+        "children": [
+          { "label": "About Us", "href": "/about-us" },
+          { "label": "Author", "href": "/author" },
+          { "label": "Category Layout 01", "href": "/category/athletics" },
+          { "label": "Category Layout 02", "href": "/category/basketball" },
+          { "label": "Category Layout 03", "href": "/category/cricket" },
+          { "label": "Post Layout 01", "href": "#" },
+          { "label": "Post Layout 02", "href": "#" },
+          { "label": "Post Layout 03", "href": "#" }
+        ]
+      },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  },
+  "ticker": {
+    "label": "Live News",
+    "items": [
+      "Breaking sports news faster than ever",
+      "Star striker leads late comeback as home team secures",
+      "National tennis champion advances to finals after dominating",
+      "Rising basketball rookie earns praise from coaches",
+      "Local football club strengthens playoff chances",
+      "Veteran cricket bowler announces return to form as team"
+    ]
+  },
+  "tags": [
+    "Beauty", "Branding", "Business", "Food", "Gaming",
+    "Makeup", "Marketing", "Politics", "Printing", "Social",
+    "Sports", "Technology", "Travel", "Trip"
+  ],
+  "videoNews": {
+    "heading": "Video News",
+    "viewChannelText": "View Channel",
+    "viewChannelHref": "#",
+    "leftCards": [
+      { "category": { "label": "Cricket", "color": "#0073ff" }, "title": "Table tennis prodigy stuns experienced opponent with", "href": "#", "author": "Matt Rosnor", "views": "40", "image": "/assets/images/video/left-1.jpg" },
+      { "category": { "label": "Football", "color": "#f69c00" }, "title": "Rugby captain praises teammates unity after hard", "href": "#", "author": "Matt Rosnor", "views": "48", "image": "/assets/images/video/left-2.jpg" },
+      { "category": { "label": "Basketball", "color": "#54bd05" }, "title": "Indoor hockey squad celebrates breakthrough win that", "href": "#", "author": "Matt Rosnor", "views": "63", "image": "/assets/images/video/left-3.jpg" }
+    ],
+    "featured": {
+      "category": { "label": "Basketball", "color": "#54bd05" },
+      "title": "High school basketball team earns community support after",
+      "href": "#",
+      "author": "Matt Rosnor",
+      "views": "53",
+      "date": "October 2, 2025",
+      "image": "/assets/images/video/featured.jpg"
+    },
+    "rightCards": [
+      { "category": { "label": "Tennis", "color": "#ff3a3a" }, "title": "Badminton star returns from injury with renewed", "href": "#", "author": "Matt Rosnor", "views": "51", "image": "/assets/images/video/right-1.jpg" },
+      { "category": { "label": "Football", "color": "#f69c00" }, "title": "Wrestling team shows determination and grit as", "href": "#", "author": "Matt Rosnor", "views": "41", "image": "/assets/images/video/right-2.jpg" },
+      { "category": { "label": "Tennis", "color": "#ff3a3a" }, "title": "Professional golf tournament concludes with close finish", "href": "#", "author": "Matt Rosnor", "views": "27", "image": "/assets/images/video/right-3.jpg" }
+    ]
+  },
+  "topOfWeek": {
+    "heading": "Top of This Week",
+    "viewAllText": "View All",
+    "viewAllHref": "#",
+    "articles": [
+      { "category": { "label": "Basketball", "color": "#54bd05" }, "title": "Star midfielder showcases brilliant passing vision guiding team offense", "href": "#", "author": "Matt Rosnor", "views": "64", "date": "October 2, 2025", "excerpt": "Breaking stories, timely updates, and essential insights. Covering politics business, science and global affairs.", "image": "/assets/images/top-week/article-1.jpg" },
+      { "category": { "label": "Athletics", "color": "#e033e0" }, "title": "Competitive swimmers display exceptional technique during relay events to", "href": "#", "author": "Matt Rosnor", "views": "44", "date": "October 2, 2025", "excerpt": "Stay ahead of the news curve with daily updates on global politics technology economy concise reliable tomorrow.", "image": "/assets/images/top-week/article-2.jpg" },
+      { "category": { "label": "Athletics", "color": "#e033e0" }, "title": "Boxing training camp reports positive progress as fighters prepare", "href": "#", "author": "Matt Rosnor", "views": "56", "date": "October 2, 2025", "excerpt": "Daily news crafted with accuracy and speed. Covering politics, business, global events, and science concise reports", "image": "/assets/images/top-week/article-3.jpg" },
+      { "category": { "label": "Hockey", "color": "#00b5ed" }, "title": "World renowned coach signs contract to lead national soccer", "href": "#", "author": "Matt Rosnor", "views": "47", "date": "October 2, 2025", "excerpt": "Trusted news reports with clarity and speed. Get updates on politics, world affairs, technology, and business in concise", "image": "/assets/images/top-week/article-4.jpg" },
+      { "category": { "label": "Basketball", "color": "#54bd05" }, "title": "Fans witness emotional ceremony honoring legendary player long successful", "href": "#", "author": "Matt Rosnor", "views": "31", "date": "October 2, 2025", "excerpt": "News you can trust, written simply. Covering politics world events, technology and economy in reliable reports.", "image": "/assets/images/top-week/article-5.jpg" },
+      { "category": { "label": "Hockey", "color": "#00b5ed" }, "title": "University athletics department announces new facilities aimed at improving", "href": "#", "author": "Matt Rosnor", "views": "36", "date": "October 2, 2025", "excerpt": "Daily news summaries that deliver clarity in a noisy world. Get reliable updates on politics global trends", "image": "/assets/images/top-week/article-6.jpg" },
+      { "category": { "label": "Hockey", "color": "#00b5ed" }, "title": "Mixed martial arts contender promises stronger comeback after reflecting", "href": "#", "author": "Matt Rosnor", "views": "33", "date": "October 2, 2025", "excerpt": "Stay updated with fast, reliable coverage of politics, global trends, economy, and technology concise daily reporting", "image": "/assets/images/top-week/article-7.jpg" },
+      { "category": { "label": "Cricket", "color": "#0073ff" }, "title": "Gymnast achieves flawless routine earning judges admiration and securing", "href": "#", "author": "Matt Rosnor", "views": "33", "date": "October 2, 2025", "excerpt": "Breaking stories with impact. Covering politics, global news, science, and culture in concise formats stay ahead", "image": "/assets/images/top-week/article-8.jpg" },
+      { "category": { "label": "Tennis", "color": "#ff3a3a" }, "title": "Ice hockey team celebrat featur defensive pressure throughout match", "href": "#", "author": "Matt Rosnor", "views": "80", "date": "October 2, 2025", "excerpt": "Concise, clear, and credible news updates. Our reporting covers politics, global events, science, and technology", "image": "/assets/images/top-week/article-9.jpg" },
+      { "category": { "label": "Athletics", "color": "#e033e0" }, "title": "Professional baseball league introduces schedule updates and enhanced", "href": "#", "author": "Matt Rosnor", "views": "51", "date": "October 2, 2025", "excerpt": "Daily news crafted with accuracy and speed. Covering politics, business, global events, and science concise reports", "image": "/assets/images/top-week/article-10.jpg" }
+    ],
+    "tabs": {
+      "recent": [
+        { "title": "Local football club strengthens playoff chances", "href": "#", "author": "Matt Rosnor", "views": "98", "image": "/assets/images/top-week/tabs/tab-1.jpg" },
+        { "title": "Veteran cricket bowler announces return to form", "href": "#", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/top-week/tabs/tab-2.jpg" },
+        { "title": "Marathon runner breaks personal best time while", "href": "#", "author": "Matt Rosnor", "views": "79", "image": "/assets/images/top-week/tabs/tab-3.jpg" },
+        { "title": "Coach expresses confidence in young squad development", "href": "#", "author": "Matt Rosnor", "views": "46", "image": "/assets/images/top-week/tabs/tab-4.jpg" }
+      ],
+      "popular": [
+        { "title": "Family travel: tun and safe destinations for", "href": "#", "author": "Matt Rosnor", "views": "24", "image": "/assets/images/top-week/tabs/tab-5.jpg" },
+        { "title": "Professional golf tournament concludes with close finish", "href": "#", "author": "Matt Rosnor", "views": "27", "image": "/assets/images/top-week/tabs/tab-6.jpg" },
+        { "title": "Fans witness emotional ceremony honoring legendary player", "href": "#", "author": "Matt Rosnor", "views": "31", "image": "/assets/images/top-week/tabs/tab-7.jpg" },
+        { "title": "Star basketball player leads team scoring while", "href": "#", "author": "Matt Rosnor", "views": "32", "image": "/assets/images/top-week/tabs/tab-8.jpg" }
+      ],
+      "trendy": [
+        { "title": "Breaking sports news faster than ever", "href": "#", "author": "Matt Rosnor", "views": "151", "image": "/assets/images/top-week/tabs/tab-9.jpg" },
+        { "title": "Ice hockey team celebrat featur defensive pressure", "href": "#", "author": "Matt Rosnor", "views": "80", "image": "/assets/images/top-week/tabs/tab-10.jpg" },
+        { "title": "Track and field athletes continue preparations for", "href": "#", "author": "Matt Rosnor", "views": "71", "image": "/assets/images/top-week/tabs/tab-11.jpg" },
+        { "title": "Battle royale games still reigning supreme", "href": "#", "author": "Matt Rosnor", "views": "77", "image": "/assets/images/top-week/tabs/tab-12.jpg" }
+      ]
+    },
+    "weather": {
+      "temperature": "28.3",
+      "feelsLike": "30.6",
+      "humidity": "48%",
+      "condition": "Haze",
+      "city": "",
+      "wind": "5.5 km/h WSW",
+      "country": "US"
+    },
+    "social": [
+      { "name": "Facebook", "followers": "88.2k Followers", "color": "#2264CB", "icon": "facebook" },
+      { "name": "Twitter - X", "followers": "48.6k Followers", "color": "#121213", "icon": "twitter" },
+      { "name": "Dribbble", "followers": "39.5k Followers", "color": "#EA4C89", "icon": "dribbble" },
+      { "name": "Pinterest", "followers": "28.2k Followers", "color": "#E60023", "icon": "pinterest" },
+      { "name": "Linkedin", "followers": "30.3k Followers", "color": "#0077B5", "icon": "linkedin" },
+      { "name": "Instagram", "followers": "24.5k Followers", "color": "#BE08AF", "icon": "instagram" }
+    ],
+    "tags": ["Beauty", "Branding", "Business", "Food", "Gaming", "Makeup", "Marketing", "Politics", "Printing", "Social", "Sports", "Technology", "Travel", "Trip"]
+  },
+  "topStories": {
+    "heading": "Top Stories",
+    "viewAllText": "View All",
+    "viewAllHref": "#",
+    "cards": [
+      {
+        "large": true,
+        "category": { "label": "Esports", "color": "#f27100" },
+        "title": "Veteran tennis player announces final season emphasizing",
+        "href": "#",
+        "author": "Matt Rosnor",
+        "views": "43",
+        "date": "October 2, 2025",
+        "image": "/assets/images/top-stories/card-1.jpg"
+      },
+      {
+        "category": { "label": "Sports", "color": "#e033e0" },
+        "title": "Track and field athletes continue preparations for national trials",
+        "href": "#",
+        "author": "Matt Rosnor",
+        "views": "71",
+        "date": "October 2, 2025",
+        "image": "/assets/images/top-stories/card-2.jpg"
+      },
+      {
+        "category": { "label": "Sports", "color": "#e033e0" },
+        "title": "Star basketball player leads team scoring while demonstrating",
+        "href": "#",
+        "author": "Matt Rosnor",
+        "views": "32",
+        "date": "October 2, 2025",
+        "image": "/assets/images/top-stories/card-3.jpg"
+      }
+    ]
+  },
+  "subscribe": {
+    "heading": "Subscribe News Updates!",
+    "placeholder": "Enter your email...",
+    "buttonText": "Subscribe",
+    "consentText": "I have read and agree to the",
+    "termsLink": "#",
+    "termsText": "terms & conditions"
+  },
+  "contact": {
+    "phone": "+81112522552",
+    "email": "info@nerio.com",
+    "address": "Ta-134/A, NY 11110, USA"
+  }
+}
