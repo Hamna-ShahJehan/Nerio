@@ -159,22 +159,22 @@
     ],
     "tabs": {
       "recent": [
-        { "title": "Local football club strengthens playoff chances", "href": "#", "author": "Matt Rosnor", "views": "98", "image": "/assets/images/top-week/tabs/tab-1.jpg" },
-        { "title": "Veteran cricket bowler announces return to form", "href": "#", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/top-week/tabs/tab-2.jpg" },
-        { "title": "Marathon runner breaks personal best time while", "href": "#", "author": "Matt Rosnor", "views": "79", "image": "/assets/images/top-week/tabs/tab-3.jpg" },
-        { "title": "Coach expresses confidence in young squad development", "href": "#", "author": "Matt Rosnor", "views": "46", "image": "/assets/images/top-week/tabs/tab-4.jpg" }
+        { "title": "Breaking sports news faster than ever", "href": "#", "author": "Matt Rosnor", "views": "152", "image": "/assets/images/sidebar-tabs/tab-recent-1.jpg" },
+        { "title": "Star striker leads late comeback as home team secures", "href": "#", "author": "Matt Rosnor", "views": "62", "image": "/assets/images/sidebar-tabs/tab-recent-2.jpg" },
+        { "title": "National tennis champion advances to finals after dominating", "href": "#", "author": "Matt Rosnor", "views": "56", "image": "/assets/images/sidebar-tabs/tab-recent-3.jpg" },
+        { "title": "Rising basketball rookie earns praise from coaches", "href": "#", "author": "Matt Rosnor", "views": "55", "image": "/assets/images/sidebar-tabs/tab-recent-4.jpg" }
       ],
       "popular": [
-        { "title": "Family travel: tun and safe destinations for", "href": "#", "author": "Matt Rosnor", "views": "24", "image": "/assets/images/top-week/tabs/tab-5.jpg" },
-        { "title": "Professional golf tournament concludes with close finish", "href": "#", "author": "Matt Rosnor", "views": "27", "image": "/assets/images/top-week/tabs/tab-6.jpg" },
-        { "title": "Fans witness emotional ceremony honoring legendary player", "href": "#", "author": "Matt Rosnor", "views": "31", "image": "/assets/images/top-week/tabs/tab-7.jpg" },
-        { "title": "Star basketball player leads team scoring while", "href": "#", "author": "Matt Rosnor", "views": "32", "image": "/assets/images/top-week/tabs/tab-8.jpg" }
+        { "title": "Fans celebrate dramatic final minute goal", "href": "#", "author": "Matt Rosnor", "views": "54", "image": "/assets/images/sidebar-tabs/tab-popular-1.jpg" },
+        { "title": "Coach expresses confidence in young squad development", "href": "#", "author": "Matt Rosnor", "views": "46", "image": "/assets/images/sidebar-tabs/tab-popular-2.jpg" },
+        { "title": "Marathon runner breaks personal best time while finishing", "href": "#", "author": "Matt Rosnor", "views": "79", "image": "/assets/images/sidebar-tabs/tab-popular-3.jpg" },
+        { "title": "Veteran cricket bowler announces return to form", "href": "#", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/sidebar-tabs/tab-popular-4.jpg" }
       ],
       "trendy": [
-        { "title": "Breaking sports news faster than ever", "href": "#", "author": "Matt Rosnor", "views": "151", "image": "/assets/images/top-week/tabs/tab-9.jpg" },
-        { "title": "Ice hockey team celebrat featur defensive pressure", "href": "#", "author": "Matt Rosnor", "views": "80", "image": "/assets/images/top-week/tabs/tab-10.jpg" },
-        { "title": "Track and field athletes continue preparations for", "href": "#", "author": "Matt Rosnor", "views": "71", "image": "/assets/images/top-week/tabs/tab-11.jpg" },
-        { "title": "Battle royale games still reigning supreme", "href": "#", "author": "Matt Rosnor", "views": "77", "image": "/assets/images/top-week/tabs/tab-12.jpg" }
+        { "title": "National volleyball side continues winning streak showing improved", "href": "#", "author": "Matt Rosnor", "views": "67", "image": "/assets/images/sidebar-tabs/tab-trendy-1.jpg" },
+        { "title": "High school basketball team earns community support after inspiring", "href": "#", "author": "Matt Rosnor", "views": "54", "image": "/assets/images/sidebar-tabs/tab-trendy-2.jpg" },
+        { "title": "Gymnast achieves flawless routine earning judges admiration", "href": "#", "author": "Matt Rosnor", "views": "34", "image": "/assets/images/sidebar-tabs/tab-trendy-3.jpg" },
+        { "title": "Veteran tennis player announces final season emphasizing", "href": "#", "author": "Matt Rosnor", "views": "43", "image": "/assets/images/sidebar-tabs/tab-trendy-4.jpg" }
       ]
     },
     "weather": {
@@ -187,12 +187,12 @@
       "country": "US"
     },
     "social": [
-      { "name": "Facebook", "followers": "88.2k Followers", "color": "#2264CB", "icon": "facebook" },
+      { "name": "Facebook", "followers": "88.2k Followers", "color": "#0073FF", "icon": "facebook" },
       { "name": "Twitter - X", "followers": "48.6k Followers", "color": "#121213", "icon": "twitter" },
-      { "name": "Dribbble", "followers": "39.5k Followers", "color": "#EA4C89", "icon": "dribbble" },
-      { "name": "Pinterest", "followers": "28.2k Followers", "color": "#E60023", "icon": "pinterest" },
+      { "name": "Dribbble", "followers": "39.5k Followers", "color": "#F53E82", "icon": "dribbble" },
+      { "name": "Pinterest", "followers": "28.2k Followers", "color": "#AF091C", "icon": "pinterest" },
       { "name": "Linkedin", "followers": "30.3k Followers", "color": "#0077B5", "icon": "linkedin" },
-      { "name": "Instagram", "followers": "24.5k Followers", "color": "#BE08AF", "icon": "instagram" }
+      { "name": "Instagram", "followers": "24.5k Followers", "color": "linear-gradient(29deg, #BE08AF 0%, #F10811 100%)", "icon": "instagram" }
     ],
     "tags": ["Beauty", "Branding", "Business", "Food", "Gaming", "Makeup", "Marketing", "Politics", "Printing", "Social", "Sports", "Technology", "Travel", "Trip"]
   },
@@ -243,5 +243,193 @@
     "phone": "+81112522552",
     "email": "info@nerio.com",
     "address": "Ta-134/A, NY 11110, USA"
+  },
+  "articles": [
+    {
+      "slug": "local-football-club-strengthens-playoff-chances",
+      "title": "Local football club strengthens playoff chances",
+      "category": { "label": "Esports", "color": "#f69c00" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/article/tm-img0041-500x500.jpg",
+        "bio": "We love to bring design's to life as a developer and I aim the today do this using whatever front end tools are necessary my preferred."
+      },
+      "date": "November 4, 2025",
+      "views": "99",
+      "comments": "No Comments",
+      "featuredImage": "/assets/images/article/sport_01-min-1200x650.jpg",
+      "content": [
+        { "type": "paragraph", "text": "A major development unfolded today as authorities confirmed significant progress in the ongoing investigation surrounding the recent incident. According to official sources, new evidence has emerged that may reshape the direction of the case. Witnesses reported increased activity at the scene early this morning, prompting speculation about potential breakthroughs." },
+        { "type": "check-list", "items": ["Customized Strategy Solutions Tailored to Your Business Goals", "Comprehensive Startup and Enterprise Support Services", "Strategic Planning for Scalable Global Expansion"] },
+        { "type": "paragraph", "text": "Nerio News Magazine brings you trusted timely and thought-provoking stories from around the globe. From breaking headlines to in-depth analysis we deliver news that informs inspires and empowers our readers With a commitment to accuracy, integrity, and fresh perspectives, Nerio more than just a magazine it's your reliable window into politics business technology" },
+        { "type": "paragraph", "text": "Authorities have issued a new statement following rapid developments in the ongoing situation, confirming that key information has come to light. Early reports indicate that investigators have identified several crucial leads, prompting renewed efforts at the scene." },
+        { "type": "images-side-by-side", "images": ["/assets/images/article/fasc03.jpg", "/assets/images/article/fasc04.jpg"] },
+        { "type": "heading", "text": "Overview of the latest sport announcement" },
+        { "type": "paragraph", "text": "Eyewitnesses described a noticeable increase in security presence, suggesting preparations for further action. Community members have been closely monitoring updates, expressing both relief and concern as the story unfolds. Analysts say the latest findings could influence upcoming decisions and shape future responses. Officials assured the public that more details will be shared as verification continues and the investigat moves forward. Predefined chunks as necessary, making this the first true generator on the Internet It uses a dictionary." },
+        { "type": "blockquote", "text": "Analysts observing the situation noted that the pace of developments suggests increasing urgency. They believe the forthcoming days will be critical as authorities evaluate the credibility and impact of the new evidence. Local leaders have urged the public to remain patient, emphasizing the importance of accuracy and thoroughness as the investigation expected to hold a press briefing soon to progresses.", "author": "Matt Rosnor" },
+        { "type": "heading", "text": "Analysis of the key sports pieces introduced" },
+        { "type": "paragraph", "text": "Residents in the surrounding area reported heightened activity as police units and forensic teams worked throughout the day, sparking speculation about an impending breakthrough. Many expressed cautious optimism, hoping that the latest findings would bring long-awaited clarity. Others voiced concerns about the broader implications, particularly regarding community safety and the timeline for official updates. Sources close to the inquiry stated that the newly uncovered information could potentially." },
+        { "type": "image-full", "src": "/assets/images/article/single03.jpg" },
+        { "type": "heading", "text": "Insight into how this sports update might influence" },
+        { "type": "paragraph", "text": "In a significant turn of events, authorities announced new developments today regarding the ongoing investigation that has captured widesp public attention. Officials confirmed that fresh evidence was discovered during an early-morning operation, prompting investigators to revisit several key aspects of the case. Sources close to the inquiry stated that the newly uncovered information" },
+        { "type": "paragraph", "text": "Nerio News Magazine brings you trusted timely and thought-provoking stories from around the globe. From breaking headlines to in-depth analysis we deliver news that informs inspires and empowers our readers with a commitment." },
+        { "type": "check-list", "items": ["Authorities Signal Major Update as Case Advances", "Investigation Gains Momentum Latest Evidence", "New Findings Intensify Public Interest in Probe"] },
+        { "type": "image-full", "src": "/assets/images/article/ad-banner-thumb-001-1.png" },
+        { "type": "heading", "text": "Final summary highlighting the overall importance" },
+        { "type": "paragraph", "text": "Residents in the surrounding area reported heightened activity as police units and forensic teams worked throughout the day, sparking speculation about an impending breakthrough. Many expressed cautious optimism, hoping that the latest findings would bring long-awaited clarity. Others voiced concerns about the broader implications, particularly regarding community safety and the timeline for official updates. Sources close to the inquiry stated that the newly uncovered information could potentially." }
+      ],
+      "tags": ["Social", "Sports", "Technology"],
+      "prevPost": { "slug": "star-striker-leads-late-comeback-as-home-team-secures", "title": "Star Striker Leads Late Comeback As Home Team Secures Victory", "image": "/assets/images/breaking/side-3.jpg" },
+      "nextPost": { "slug": "breaking-sports-news-faster-than-ever", "title": "Breaking Sports News Faster Than Ever Before", "image": "/assets/images/hero/recent-3.jpg" }
+    },
+    {
+      "slug": "star-striker-leads-late-comeback-as-home-team-secures",
+      "title": "Star Striker Leads Late Comeback As Home Team Secures Dramatic Victory",
+      "category": { "label": "Sports", "color": "#e033e0" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/hero/recent-2.jpg",
+        "bio": "Matt Rosnor is a senior sports journalist covering football, basketball, and global sporting events. With over a decade of experience, he brings insightful analysis and in-depth reporting to every story."
+      },
+      "date": "November 18, 2025",
+      "views": "203",
+      "comments": "5",
+      "featuredImage": "/assets/images/breaking/slider-2.jpg",
+      "content": [
+        { "type": "paragraph", "text": "In one of the most thrilling matches of the season, the star striker delivered a masterclass performance, leading his team to a dramatic comeback victory that will be remembered for years to come. The atmosphere in the stadium was electric as fans witnessed an incredible display of skill, determination, and team spirit." },
+        { "type": "images-side-by-side", "images": ["/assets/images/breaking/side-2.jpg", "/assets/images/breaking/side-3.jpg"] },
+        { "type": "heading", "text": "Overview of the Latest Sports Announcement" },
+        { "type": "paragraph", "text": "The sports world has been buzzing with excitement following this incredible display. Analysts and former players have praised the team's resilience and tactical awareness, noting that this performance sets a new benchmark for competitive excellence in the league." },
+        { "type": "blockquote", "text": "Individual brilliance combined with collective determination is what makes sports so captivating. This match will be studied and discussed for many seasons to come.", "author": "Matt Rosnor" },
+        { "type": "heading", "text": "Analysis of the Key Sports Pieces Introduced" },
+        { "type": "paragraph", "text": "The tactical flexibility shown by the coaching staff throughout the match was particularly noteworthy. The ability to adapt formations and strategies mid-game proved to be the decisive factor. The substitutes made a crucial impact, demonstrating the depth and quality available in the squad." },
+        { "type": "image-full", "src": "/assets/images/breaking/slider-3.jpg" },
+        { "type": "heading", "text": "Insights into How This Sports Update Might Influence the League" },
+        { "type": "paragraph", "text": "This victory has significant implications for the title race. With momentum firmly on their side, the team now looks ahead to the remaining fixtures with confidence and purpose. The psychological advantage gained from such a memorable win cannot be underestimated." },
+        { "type": "image-full", "src": "/assets/images/video/left-1.jpg" },
+        { "type": "paragraph", "text": "The ripple effects of this dramatic result extend throughout the league, affecting team strategies, transfer market dynamics, and fan expectations. It serves as a testament to the unpredictable and captivating nature of competitive sports at the highest level." }
+      ],
+      "tags": ["Social", "Sports", "Technology"],
+      "prevPost": { "slug": "breaking-sports-news-faster-than-ever", "title": "Breaking Sports News Faster Than Ever Before", "image": "/assets/images/hero/recent-3.jpg" },
+      "nextPost": { "slug": "local-football-club-strengthens-playoff-chances", "title": "Local Football Club Strengthens Playoff Chances", "image": "/assets/images/breaking/featured-1.jpg" }
+    },
+    {
+      "slug": "breaking-sports-news-faster-than-ever",
+      "title": "Breaking Sports News Faster Than Ever Before In Modern Athletics",
+      "category": { "label": "Sports", "color": "#e033e0" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/hero/recent-3.jpg",
+        "bio": "Matt Rosnor covers breaking sports news and real-time updates across multiple disciplines. His fast-paced reporting style keeps readers informed with the latest developments from around the sporting world."
+      },
+      "date": "November 20, 2025",
+      "views": "312",
+      "comments": "8",
+      "featuredImage": "/assets/images/breaking/slider-3.jpg",
+      "content": [
+        { "type": "paragraph", "text": "The sports media landscape has evolved dramatically in recent years, with fans demanding faster and more accurate coverage than ever before. This article explores how modern technology and innovative journalism practices are reshaping the way sports news is delivered to audiences worldwide." },
+        { "type": "images-side-by-side", "images": ["/assets/images/hero/recent-4.jpg", "/assets/images/hero/recent-5.jpg"] },
+        { "type": "heading", "text": "Overview of the Latest Sports Announcement" },
+        { "type": "paragraph", "text": "Several major developments in sports broadcasting and digital media have converged to create an unprecedented environment for sports journalism. Real-time data analytics, social media integration, and mobile-first content strategies are all contributing to a revolution in how fans consume sports news." },
+        { "type": "blockquote", "text": "The future of sports journalism lies in the ability to combine speed with accuracy. Readers deserve both immediate updates and thoughtful analysis.", "author": "Matt Rosnor" },
+        { "type": "heading", "text": "Analysis of the Key Sports Pieces Introduced" },
+        { "type": "paragraph", "text": "New tools and platforms are enabling journalists to cover events in real-time while maintaining the editorial standards that readers expect. The integration of artificial intelligence in content creation and distribution has opened new possibilities for personalized sports coverage." },
+        { "type": "image-full", "src": "/assets/images/video/right-1.jpg" },
+        { "type": "heading", "text": "Insights into How This Sports Update Might Influence the League" },
+        { "type": "paragraph", "text": "As media consumption habits continue to evolve, sports organizations and journalists must adapt their strategies to meet the changing needs of their audiences. The emphasis on mobile delivery, video content, and interactive features represents the next frontier in sports journalism." },
+        { "type": "image-full", "src": "/assets/images/video/right-2.jpg" },
+        { "type": "paragraph", "text": "The convergence of technology and journalism in the sports world promises to deliver more engaging, accessible, and comprehensive coverage than ever before, ensuring that fans remain connected to the stories and athletes they care about most." }
+      ],
+      "tags": ["Social", "Sports", "Technology"],
+      "prevPost": { "slug": "local-football-club-strengthens-playoff-chances", "title": "Local Football Club Strengthens Playoff Chances", "image": "/assets/images/breaking/featured-1.jpg" },
+      "nextPost": { "slug": "star-striker-leads-late-comeback-as-home-team-secures", "title": "Star Striker Leads Late Comeback", "image": "/assets/images/breaking/slider-2.jpg" }
+    },
+    {
+      "slug": "national-tennis-champion-advances-to-finals-after-dominating",
+      "title": "National Tennis Champion Advances To Finals After Dominating Performance",
+      "category": { "label": "Basketball", "color": "#54bd05" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/hero/recent-2.jpg",
+        "bio": "Matt Rosnor is a senior sports journalist covering football, basketball, and global sporting events."
+      },
+      "date": "November 22, 2025",
+      "views": "189",
+      "comments": "2",
+      "featuredImage": "/assets/images/top-week/article-1.jpg",
+      "content": [
+        { "type": "paragraph", "text": "The national tennis champion delivered a commanding performance to secure a place in the finals, demonstrating exceptional skill and mental fortitude throughout the tournament." },
+        { "type": "paragraph", "text": "From the opening serve, the champion dominated proceedings with a display that left opponents and spectators alike in awe of the technical proficiency on show." },
+        { "type": "blockquote", "text": "This performance sets the standard for what we can expect in the finals. The level of play was simply outstanding.", "author": "Matt Rosnor" },
+        { "type": "paragraph", "text": "The journey to the finals has been marked by consistent improvement and strategic adaptation, showcasing the depth of preparation that went into this campaign." }
+      ],
+      "tags": ["Sports", "Technology"],
+      "prevPost": { "slug": "breaking-sports-news-faster-than-ever", "title": "Breaking Sports News Faster Than Ever Before", "image": "/assets/images/breaking/slider-3.jpg" },
+      "nextPost": { "slug": "local-football-club-strengthens-playoff-chances", "title": "Local Football Club Strengthens Playoff Chances", "image": "/assets/images/breaking/featured-1.jpg" }
+    },
+    {
+      "slug": "rising-basketball-rookie-earns-praise-from-coaches",
+      "title": "Rising Basketball Rookie Earns Praise From Coaches And Teammates Alike",
+      "category": { "label": "Cricket", "color": "#0073ff" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/hero/recent-3.jpg",
+        "bio": "Matt Rosnor covers breaking sports news and real-time updates across multiple disciplines."
+      },
+      "date": "November 24, 2025",
+      "views": "142",
+      "comments": "4",
+      "featuredImage": "/assets/images/video/featured.jpg",
+      "content": [
+        { "type": "paragraph", "text": "A rising basketball rookie has earned widespread praise from coaches and teammates following a series of impressive performances that have exceeded all expectations this season." },
+        { "type": "paragraph", "text": "The young talent's ability to adapt to the professional level has been nothing short of remarkable, with veteran players noting the maturity and composure shown under pressure." },
+        { "type": "blockquote", "text": "His work ethic and dedication to improving every day is what sets him apart. He has a bright future ahead.", "author": "Matt Rosnor" },
+        { "type": "paragraph", "text": "As the season progresses, all eyes will be on this promising rookie to see if the early form can be sustained through the demanding schedule ahead." }
+      ],
+      "tags": ["Sports", "Social"],
+      "prevPost": { "slug": "star-striker-leads-late-comeback-as-home-team-secures", "title": "Star Striker Leads Late Comeback", "image": "/assets/images/breaking/slider-2.jpg" },
+      "nextPost": { "slug": "national-tennis-champion-advances-to-finals-after-dominating", "title": "National Tennis Champion Advances To Finals", "image": "/assets/images/top-week/article-1.jpg" }
+    },
+    {
+      "slug": "veteran-cricket-bowler-announces-return-to-form-as-team",
+      "title": "Veteran Cricket Bowler Announces Return To Form As Team Rallies Behind",
+      "category": { "label": "Tennis", "color": "#ff3a3a" },
+      "author": {
+        "name": "Matt Rosnor",
+        "avatar": "/assets/images/hero/recent-1.jpg",
+        "bio": "Matt Rosnor is a senior sports journalist covering football, basketball, and global sporting events."
+      },
+      "date": "November 26, 2025",
+      "views": "176",
+      "comments": "6",
+      "featuredImage": "/assets/images/breaking/slider-1.jpg",
+      "content": [
+        { "type": "paragraph", "text": "A veteran cricket bowler has announced a remarkable return to form, delivering performances that have reminded fans and critics of the skill that made them a household name." },
+        { "type": "paragraph", "text": "After a period of inconsistency, the experienced campaigner has rediscovered the rhythm and precision that characterized the best phases of their illustrious career." },
+        { "type": "blockquote", "text": "Experience cannot be replaced. His comeback is an inspiration to every young cricketer watching.", "author": "Matt Rosnor" },
+        { "type": "paragraph", "text": "The team has rallied behind the veteran's resurgence, with the renewed confidence permeating through the entire squad as they prepare for upcoming challenges." }
+      ],
+      "tags": ["Technology", "Business"],
+      "prevPost": { "slug": "national-tennis-champion-advances-to-finals-after-dominating", "title": "National Tennis Champion Advances To Finals", "image": "/assets/images/top-week/article-1.jpg" },
+      "nextPost": { "slug": "rising-basketball-rookie-earns-praise-from-coaches", "title": "Rising Basketball Rookie Earns Praise", "image": "/assets/images/video/featured.jpg" }
+    }
+  ],
+  "sidebar": {
+    "categories": [
+      { "name": "Sports", "count": 5, "href": "#" },
+      { "name": "Football", "count": 5, "href": "#" },
+      { "name": "Cricket", "count": 5, "href": "#" },
+      { "name": "Basketball", "count": 5, "href": "#" },
+      { "name": "Hockey", "count": 5, "href": "#" }
+    ],
+    "socialCards": [
+      { "name": "Facebook", "followers": "88.2k Followers", "color": "#0073FF", "icon": "facebook" },
+      { "name": "Twitter - X", "followers": "48.6k Followers", "color": "#121213", "icon": "twitter" },
+      { "name": "Dribbble", "followers": "39.5k Followers", "color": "#F53E82", "icon": "dribbble" },
+      { "name": "Pinterest", "followers": "28.2k Followers", "color": "#AF091C", "icon": "pinterest" },
+      { "name": "LinkedIn", "followers": "30.3k Followers", "color": "#0077B5", "icon": "linkedin" },
+      { "name": "Instagram", "followers": "24.5k Followers", "color": "linear-gradient(29deg, #BE08AF 0%, #F10811 100%)", "icon": "instagram" }
+    ],
+    "tags": ["Beauty", "Branding", "Business", "Food", "Gaming", "Makeup", "Marketing", "Politics", "Printing", "Social", "Sports", "Technology", "Travel", "Trip"]
   }
 }
