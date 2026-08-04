@@ -1098,11 +1098,10 @@ ul {
 
 .tag-cloud-track {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  white-space: nowrap;
-  flex-wrap: nowrap;
+  gap: 15px;
   will-change: transform;
-  gap: 9px;
 }
 
 .tag-cloud-link {
@@ -2543,11 +2542,14 @@ ul {
 .footer-tags-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
   background-color: #1e2227;
   color: #ffffff;
   font-size: 14px;
@@ -2701,6 +2703,10 @@ ul {
 
   .footer-app-buttons {
     margin-top: 20px;
+  }
+
+  .footer-tags-container {
+    padding: 20px;
   }
 
   .footer-copyright-inner {
