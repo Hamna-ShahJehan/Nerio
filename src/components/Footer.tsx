@@ -224,7 +224,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Tags */}
-          <div className="footer-tags" style={{ flex: "1 1 250px" }}>
+          <div className="footer-tags" style={{ flex: "1 1 350px" }}>
             <h5 className="footer-heading">Tags</h5>
             <div className="footer-divider" />
             <div className="footer-tags-container">

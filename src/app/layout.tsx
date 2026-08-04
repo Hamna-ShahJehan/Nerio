@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import StickySidebar from "@/components/StickySidebar";
-import Script from "next/script";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",

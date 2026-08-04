@@ -38,7 +38,7 @@ function SmallVideoCard({
 }) {
   return (
     <div className="flex items-center gap-[15px]">
-      <Link href={post.href} className="block flex-shrink-0 w-[105px] min-w-[105px] h-[75px] rounded-lg overflow-hidden relative group">
+      <Link href={post.href} className="block flex-shrink-0 w-[112px] min-w-[112px] h-[112px] rounded-lg overflow-hidden relative group">
         <img
           src={post.image}
           alt={post.title}
@@ -50,7 +50,7 @@ function SmallVideoCard({
       </Link>
       <div className="flex-1 min-w-0 flex flex-col justify-center">
         <CategoryPill label={post.category.label} color={post.category.color} />
-        <h6 className="text-[14px] font-semibold text-white leading-[1.35] line-clamp-2 mt-1">
+        <h6 className="text-[16px] font-semibold text-white leading-[23.04px] line-clamp-2 mt-1">
           <Link href={post.href} className="hover:text-[var(--primaryColor)] transition-colors">
             {post.title}
           </Link>
@@ -104,16 +104,16 @@ export default function VideoNews() {
         </div>
 
         {/* MAIN 3-COLUMN LAYOUT */}
-        <div className="grid grid-cols-1 lg:grid-cols-[28fr_44fr_28fr] gap-[20px] items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-[32fr_33fr_32fr] gap-[20px] items-stretch">
           {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-between gap-[20px] order-2 lg:order-1">
+          <div className="flex flex-col justify-start gap-[25px] order-2 lg:order-1">
             {leftCards.map((post, i) => (
               <SmallVideoCard key={i} post={post} />
             ))}
           </div>
 
           {/* CENTER FEATURED CARD */}
-          <div className="relative rounded-xl overflow-hidden min-h-[380px] lg:min-h-full flex flex-col justify-end p-[30px] order-1 lg:order-2 group">
+          <div className="relative rounded-xl overflow-hidden w-full max-w-[425px] aspect-[425/374] flex flex-col justify-end p-[30px] order-1 lg:order-2 lg:mx-auto group">
             <Link href={featured.href} className="absolute inset-0 z-0">
               <img
                 src={featured.image}
@@ -154,7 +154,7 @@ export default function VideoNews() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex flex-col justify-between gap-[20px] order-3">
+          <div className="flex flex-col justify-start gap-[25px] order-3">
             {rightCards.map((post, i) => (
               <SmallVideoCard key={i} post={post} />
             ))}

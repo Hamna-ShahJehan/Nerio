@@ -1,5 +1,9 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+
 import data from "@/data/data.json";
 
 const { featured, featuredCards, recentNews } = data.hero;
@@ -53,53 +57,68 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Two featured cards below the button */}
+          {/* Featured cards carousel below the button */}
           <div className="hero-featured-cards">
-            {featuredCards.map((post, i) => (
-              <div className="hero-featured-card" key={i}>
-                <div className="fpg-post-thumb">
-                  <a href={post.href} className="image-link">
-                    <img src={post.image} alt="" width={300} height={149} />
-                  </a>
-                </div>
-                <div className="fpg-post-content">
-                  <div className="fpg-post-content-inner">
-                    <div className="fpg-post-cat">
-                      <a
-                        href={post.href}
-                        className="post-cat"
-                        style={{
-                          "--catCurrentBgColor": post.category.color,
-                          "--catCurrentColor": "#ffffff",
-                        } as React.CSSProperties}
-                      >
-                        {post.category.label}
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: false }}
+              loop
+              spaceBetween={20}
+              slidesPerView={1}
+              slidesPerGroup={1}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 3 },
+              }}
+            >
+              {featuredCards.map((post, i) => (
+                <SwiperSlide key={i} className="h-auto">
+                  <div className="hero-featured-card">
+                    <div className="fpg-post-thumb">
+                      <a href={post.href} className="image-link">
+                        <img src={post.image} alt="" width={300} height={149} />
                       </a>
                     </div>
-                    <h6 className="fpg-post-title">
-                      <a href={post.href}>{post.title}</a>
-                    </h6>
-                  </div>
-                  <ul className="fpg-post-meta">
-                    <li>
-                      <span className="fpg-meta">
-                        <span>
-                          By{" "}
-                          <a href="#" className="fpg-author-link">
-                            {post.author}
+                    <div className="fpg-post-content">
+                      <div className="fpg-post-content-inner">
+                        <div className="fpg-post-cat">
+                          <a
+                            href={post.href}
+                            className="post-cat"
+                            style={{
+                              "--catCurrentBgColor": post.category.color,
+                              "--catCurrentColor": "#ffffff",
+                            } as React.CSSProperties}
+                          >
+                            {post.category.label}
                           </a>
-                        </span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="fpg-meta">
-                        <i className="ri-pulse-fill" /> {post.views} Views
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            ))}
+                        </div>
+                        <h6 className="fpg-post-title">
+                          <a href={post.href}>{post.title}</a>
+                        </h6>
+                      </div>
+                      <ul className="fpg-post-meta">
+                        <li>
+                          <span className="fpg-meta">
+                            <span>
+                              By{" "}
+                              <a href="#" className="fpg-author-link">
+                                {post.author}
+                              </a>
+                            </span>
+                          </span>
+                        </li>
+                        <li>
+                          <span className="fpg-meta">
+                            <i className="ri-pulse-fill" /> {post.views} Views
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
 

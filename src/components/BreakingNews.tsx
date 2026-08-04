@@ -131,38 +131,38 @@ export default function BreakingNews() {
             }}
           >
             {sliderPosts.map((post, i) => (
-              <SwiperSlide key={i}>
-                <div className="bg-white rounded-xl overflow-hidden group border border-gray-100">
-                  <Link href={post.href} className="block p-4 pb-0">
-                    <div className="aspect-[2/1] overflow-hidden rounded-lg">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
+              <SwiperSlide key={i} className="h-auto">
+                <div className="group flex h-full flex-col bg-white border border-[var(--borderColor,#e5e7eb)] rounded-[12px] overflow-hidden p-[16px] transition-all duration-300 hover:shadow-md">
+                  <Link href={post.href} className="block relative overflow-hidden rounded-[8px] aspect-[16/10] flex-shrink-0">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
                   </Link>
-                  <div className="px-5 py-4">
+                  <div className="flex flex-col flex-1 pt-[16px]">
                     <PostBadge label={post.category.label} color={post.category.color} />
-                    <h4 className="mt-2 text-[17px] font-bold text-[var(--titleColor)] leading-snug line-clamp-2">
-                      <Link href={post.href} className="text-[var(--titleColor)] hover:text-[var(--primaryColor)] transition-colors">
+                    <h4 className="mt-[10px] text-[18px] font-bold text-[var(--titleColor)] leading-[1.35] line-clamp-2">
+                      <Link href={post.href} className="text-[var(--titleColor)] transition-colors duration-200 hover:text-[var(--primaryColor)]">
                         {post.title}
                       </Link>
                     </h4>
-                    <ul className="flex items-center gap-x-3 mt-2.5 text-xs text-[var(--bodyColor)]">
+                    <ul className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-[12px] mt-auto text-[14px] text-[var(--bodyColor)]">
                       <li className="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current opacity-50"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        <span>By <Link href="#" className="text-[var(--bodyColor)] hover:text-[var(--primaryColor)] transition-colors">{post.author}</Link></span>
+                        <span>By</span>
+                        <Link href="#" className="font-medium text-[var(--titleColor)] transition-colors duration-200 hover:text-[var(--primaryColor)]">
+                          {post.author}
+                        </Link>
                       </li>
-                      <li className="flex items-center gap-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current opacity-50"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                      <li className="flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
                         <span>{post.views} Views</span>
                       </li>
+                      <li className="flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+                        <span>{post.date}</span>
+                      </li>
                     </ul>
-                    <div className="flex items-center gap-1 mt-1.5 text-xs text-[var(--bodyColor)]">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current opacity-50"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
-                      <span>{post.date}</span>
-                    </div>
                   </div>
                 </div>
               </SwiperSlide>
