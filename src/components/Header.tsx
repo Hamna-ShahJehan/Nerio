@@ -150,7 +150,7 @@ export default function Header() {
     if (!track) return;
     const children = Array.from(track.children) as HTMLElement[];
     if (children.length === 0) return;
-    const GAP = 9;
+    const GAP = 15;
     const trackWidth = track.parentElement!.clientWidth;
     const totalWidth = children.reduce((sum, child) => sum + child.offsetWidth, 0) + (children.length - 1) * GAP;
     setMaxTagOffset(Math.max(0, totalWidth - trackWidth));
@@ -169,7 +169,7 @@ export default function Header() {
     const children = Array.from(track.children) as HTMLElement[];
     if (children.length === 0) return;
 
-    const GAP = 9;
+    const GAP = 15;
     const step = children.length > 1 ? children[1].offsetWidth + GAP : children[0].offsetWidth;
 
     setTagOffset((prev) => {

@@ -1098,7 +1098,7 @@ ul {
 
 .tag-cloud-track {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 15px;
   will-change: transform;
