@@ -2743,15 +2743,20 @@ ul {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 30px;
+    gap: 100px;
     min-width: 0;
   }
 
-  .footer-categories,
   .footer-recent,
   .footer-tags {
     flex: 1;
     min-width: 0;
+  }
+
+  .footer-categories {
+    flex: 0 1 auto;
+    min-width: 0;
+    padding-right: 0;
   }
 }
 
