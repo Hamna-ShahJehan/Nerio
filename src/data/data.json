@@ -94,17 +94,23 @@
         "href": "#",
         "hasSubMenu": true,
         "children": [
-          { "label": "About Us", "href": "/about-us" },
           { "label": "Author", "href": "/author" },
           { "label": "Category Layout 01", "href": "/category/athletics" },
           { "label": "Category Layout 02", "href": "/category/basketball" },
-          { "label": "Category Layout 03", "href": "/category/cricket" },
-          { "label": "Post Layout 01", "href": "#" },
-          { "label": "Post Layout 02", "href": "#" },
-          { "label": "Post Layout 03", "href": "#" }
+          { "label": "Category Layout 03", "href": "/category/cricket" }
         ]
       },
-      { "label": "Contact", "href": "/contact" }
+      { "label": "Contact", "href": "/contact" },
+      {
+        "label": "Static & Legal",
+        "href": "#",
+        "hasSubMenu": true,
+        "children": [
+          { "label": "About Us", "href": "/about-us" },
+          { "label": "Privacy Policy & GDPR/CCPA", "href": "/privacy-policy" },
+          { "label": "Terms of Service", "href": "/terms-of-service" }
+        ]
+      }
     ]
   },
   "ticker": {

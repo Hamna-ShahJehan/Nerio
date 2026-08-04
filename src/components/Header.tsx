@@ -73,6 +73,15 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Contact", href: "/contact" },
+  {
+    label: "Static & Legal",
+    hasSubMenu: true,
+    children: [
+      { label: "About Us", href: "/about-us" },
+      { label: "Privacy Policy & GDPR/CCPA", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+    ],
+  },
 ];
 
 interface MobileNavItem {
@@ -113,6 +122,14 @@ const mobileNavItems: MobileNavItem[] = [
     ],
   },
   { label: "Contact", href: "/contact" },
+  {
+    label: "Static & Legal",
+    children: [
+      { label: "About Us", href: "/about-us" },
+      { label: "Privacy Policy & GDPR/CCPA", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+    ],
+  },
 ];
 
 const tickerNews = [
