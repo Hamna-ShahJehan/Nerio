@@ -70,9 +70,10 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="nerio-container">
         <div className="footer-main">
-          {/* Column 1: Brand */}
-          <div className="footer-brand" style={{ flex: "1 1 280px" }}>
-            <div className="footer-logo">
+          {/* Row 1: Brand */}
+          <div className="footer-brand-wrap">
+            <div className="footer-brand">
+              <div className="footer-logo">
               <Image
                 src="/assets/images/footer/logo.png"
                 alt="Sports News"
@@ -147,10 +148,13 @@ export default function Footer() {
                 priority={false}
               />
             </div>
+            </div>
           </div>
 
-          {/* Column 2: Top Categories */}
-          <div className="footer-categories" style={{ flex: "1 1 200px" }}>
+          {/* Row 2: Columns Row: Top Categories, Recent Posts, Tags */}
+          <div className="footer-cols">
+            {/* Column 2: Top Categories */}
+            <div className="footer-categories">
             <h5 className="footer-heading">Top Categories</h5>
             <div className="footer-divider" />
             <ul className="footer-category-list">
@@ -166,7 +170,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Recent Posts */}
-          <div className="footer-recent" style={{ flex: "1 1 300px" }}>
+          <div className="footer-recent">
             <h5 className="footer-heading">Recent Post</h5>
             <div className="footer-divider" />
             <div className="footer-recent-list">
@@ -224,7 +228,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Tags */}
-          <div className="footer-tags" style={{ flex: "1 1 350px" }}>
+          <div className="footer-tags">
             <h5 className="footer-heading">Tags</h5>
             <div className="footer-divider" />
             <div className="footer-tags-container">
@@ -236,6 +240,7 @@ export default function Footer() {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

@@ -2263,7 +2263,19 @@ ul {
   gap: 30px;
 }
 
-/* --- Column 1: Brand --- */
+/* Wrapper for the 3 content columns. Transparent by default so Desktop,
+   Tablet Portrait and Mobile see the exact same DOM as before. Only
+   Tablet Landscape turns it into a real flex row. */
+.footer-cols {
+  display: contents;
+}
+
+/* --- Row 1: Brand --- */
+.footer-brand-wrap {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -2373,6 +2385,7 @@ ul {
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 10px;
+  flex: 1 1 200px;
 }
 
 .footer-category-list {
@@ -2415,6 +2428,7 @@ ul {
 .footer-recent {
   padding-top: 10px;
   padding-bottom: 10px;
+  flex: 1 1 300px;
 }
 
 .footer-recent-list {
@@ -2529,6 +2543,7 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
   align-self: flex-start;
+  flex: 1 1 350px;
 }
 
 .footer-tags-container {
@@ -2659,30 +2674,84 @@ ul {
 }
 
 /* --- Footer Responsive --- */
-@media (max-width: 1024px) {
+
+/* Tablet (768px - 1024px): brand full-width row, then categories + recent
+   side by side, then tags full-width row. minmax(0,1fr) + min-width: 0
+   prevent horizontal overflow from column content. */
+@media (min-width: 768px) and (max-width: 1024px) {
   .footer-main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: start;
     padding: 60px 10px;
   }
 
-  .footer-brand {
-    width: 65%;
+  .footer-brand-wrap {
+    grid-column: 1 / -1;
+    min-width: 0;
   }
 
   .footer-categories {
-    width: 35%;
+    grid-column: 1;
+    min-width: 0;
     padding-left: 10px;
   }
 
   .footer-recent {
-    width: 55%;
+    grid-column: 2;
+    min-width: 0;
   }
 
   .footer-tags {
-    width: 45%;
+    grid-column: 1 / -1;
+    min-width: 0;
   }
 
   .footer-app-buttons {
+    display: flex;
     margin-top: 40px;
+  }
+
+  .footer-tags-container {
+    min-width: 0;
+  }
+}
+
+/* Tablet Landscape only (small and big tablets): brand wrapper (full-width
+   row 1), then the cols wrapper (flex row) places Top Categories | Recent
+   Posts | Tags as the 3-column row 2. Gated to touch tablets (hover:none +
+   pointer:coarse) up to 1920px so laptops/desktops keep their layout. */
+@media (min-width: 768px) and (max-width: 1920px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 60px 10px;
+  }
+
+  .footer-brand-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: none;
+    min-width: 0;
+  }
+
+  .footer-cols {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    min-width: 0;
+  }
+
+  .footer-categories,
+  .footer-recent,
+  .footer-tags {
+    flex: 1;
+    min-width: 0;
   }
 }
 
@@ -2692,10 +2761,12 @@ ul {
     gap: 30px;
   }
 
-  .footer-brand,
+  .footer-brand-wrap,
   .footer-categories,
   .footer-recent,
   .footer-tags {
+    flex: 1 1 100%;
+    min-width: 0;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
