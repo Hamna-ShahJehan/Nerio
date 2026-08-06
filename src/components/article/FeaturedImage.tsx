@@ -1,4 +1,5 @@
 export default function FeaturedImage({ src, alt }: { src: string; alt: string }) {
+  if (!src) return null;
   return (
     <div className="mb-[24px] rounded-[6px] overflow-hidden">
       <img

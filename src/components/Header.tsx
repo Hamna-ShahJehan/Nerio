@@ -310,7 +310,7 @@ export default function Header() {
               <Link href="/" className="rstb-site-logo">
                 <Image
                   src="/assets/images/logo.png"
-                  alt="Sports News"
+                  alt="Travel News"
                   width={100}
                   height={35}
                   priority
@@ -649,7 +649,7 @@ export default function Header() {
                 <Link href="/" className="rstb-site-logo">
                   <Image
                     src="/assets/images/logo.png"
-                    alt="Sports News"
+                    alt="Travel News"
                     width={150}
                     height={35}
                     style={{ height: 35, width: "auto" }}

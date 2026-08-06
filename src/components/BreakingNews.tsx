@@ -6,9 +6,14 @@ import "swiper/swiper-bundle.css";
 
 import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 const { heading, viewAllText, viewAllHref, featured, sidePosts, sliderPosts } =
   data.breakingNews;
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 function PostBadge({
   label,
@@ -46,7 +51,7 @@ export default function BreakingNews() {
         <div className="flex gap-6 max-[1024px]:flex-col max-[1024px]:gap-5">
           {/* LEFT — Large featured card */}
           <div className="flex-1 min-w-0 relative rounded-xl overflow-hidden group">
-            <Link href={featured.href} className="block relative h-full">
+            <Link href={getHref(featured)} className="block relative h-full">
               <div className="absolute inset-0 overflow-hidden">
                 <img
                   src={featured.image}
@@ -85,7 +90,7 @@ export default function BreakingNews() {
                 key={i}
                 className="flex gap-3 bg-white rounded-lg p-3 mb-3 last:mb-0 border border-gray-100 transition-colors hover:bg-gray-50"
               >
-                <Link href={post.href} className="block flex-shrink-0 w-[100px] h-[85px] rounded-lg overflow-hidden">
+                <Link href={getHref(post)} className="block flex-shrink-0 w-[100px] h-[85px] rounded-lg overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -95,7 +100,7 @@ export default function BreakingNews() {
                 <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
                   <PostBadge label={post.category.label} color={post.category.color} />
                   <h6 className="text-sm font-semibold text-[var(--titleColor)] leading-[1.35] line-clamp-2">
-                    <Link href={post.href} className="hover:text-[var(--primaryColor)] transition-colors">
+                    <Link href={getHref(post)} className="hover:text-[var(--primaryColor)] transition-colors">
                       {post.title}
                     </Link>
                   </h6>
@@ -133,7 +138,7 @@ export default function BreakingNews() {
             {sliderPosts.map((post, i) => (
               <SwiperSlide key={i} className="h-auto">
                 <div className="group flex h-full flex-col bg-white border border-[var(--borderColor,#e5e7eb)] rounded-[12px] overflow-hidden p-[16px] transition-all duration-300 hover:shadow-md">
-                  <Link href={post.href} className="block relative overflow-hidden rounded-[8px] aspect-[16/10] flex-shrink-0">
+                  <Link href={getHref(post)} className="block relative overflow-hidden rounded-[8px] aspect-[16/10] flex-shrink-0">
                     <img
                       src={post.image}
                       alt={post.title}
@@ -143,7 +148,7 @@ export default function BreakingNews() {
                   <div className="flex flex-col flex-1 pt-[16px]">
                     <PostBadge label={post.category.label} color={post.category.color} />
                     <h4 className="mt-[10px] text-[18px] font-bold text-[var(--titleColor)] leading-[1.35] line-clamp-2">
-                      <Link href={post.href} className="text-[var(--titleColor)] transition-colors duration-200 hover:text-[var(--primaryColor)]">
+                      <Link href={getHref(post)} className="text-[var(--titleColor)] transition-colors duration-200 hover:text-[var(--primaryColor)]">
                         {post.title}
                       </Link>
                     </h4>

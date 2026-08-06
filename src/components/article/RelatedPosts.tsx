@@ -4,6 +4,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
+
 interface RelatedArticle {
   slug: string;
   title: string;
@@ -32,13 +33,13 @@ export default function RelatedPosts({ articles }: { articles: RelatedArticle[] 
           </div>
         </div>
         <div className="flex items-center gap-[10px]">
-          <div className="related-prev w-[36px] h-[36px] rounded-[6px] border border-[#E5E7EB] bg-white flex items-center justify-center text-[#374151] cursor-pointer transition-all duration-300 hover:bg-[#007AFF] hover:text-white hover:border-[#007AFF]">
+          <div className="related-prev w-[36px] h-[36px] rounded-[6px] border border-[#007AFF] bg-white flex items-center justify-center text-[#007AFF] cursor-pointer transition-all duration-300 hover:bg-[#007AFF] hover:text-white hover:border-[#007AFF]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </div>
-          <div className="related-next w-[36px] h-[36px] rounded-[6px] border border-[#E5E7EB] bg-white flex items-center justify-center text-[#374151] cursor-pointer transition-all duration-300 hover:bg-[#007AFF] hover:text-white hover:border-[#007AFF]">
+          <div className="related-next w-[36px] h-[36px] rounded-[6px] border border-[#007AFF] bg-white flex items-center justify-center text-[#007AFF] cursor-pointer transition-all duration-300 hover:bg-[#007AFF] hover:text-white hover:border-[#007AFF]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
@@ -95,7 +96,7 @@ export default function RelatedPosts({ articles }: { articles: RelatedArticle[] 
                     <ul className="fpg-post-meta flex items-center gap-[10px] text-[14px] text-body">
                       <li>
                         <span className="fpg-meta">
-                          <Link href="#" className="text-primary transition-colors duration-300">By {authorName}</Link>
+                          By <Link href="#" className="text-gray-600 hover:text-[#007AFF] transition-colors duration-300">{authorName}</Link>
                         </span>
                       </li>
                       <li>

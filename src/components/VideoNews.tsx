@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 const { heading, viewChannelText, viewChannelHref, leftCards, featured, rightCards } =
   data.videoNews;
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 function PlayIcon({ size = 17 }: { size?: number }) {
   return (
@@ -38,7 +43,7 @@ function SmallVideoCard({
 }) {
   return (
     <div className="flex items-center gap-[15px]">
-      <Link href={post.href} className="block flex-shrink-0 w-[112px] min-w-[112px] h-[112px] rounded-lg overflow-hidden relative group">
+      <Link href={getHref(post)} className="block flex-shrink-0 w-[112px] min-w-[112px] h-[112px] rounded-lg overflow-hidden relative group">
         <img
           src={post.image}
           alt={post.title}
@@ -51,7 +56,7 @@ function SmallVideoCard({
       <div className="flex-1 min-w-0 flex flex-col justify-center">
         <CategoryPill label={post.category.label} color={post.category.color} />
         <h6 className="text-[16px] font-semibold text-white leading-[23.04px] line-clamp-2 mt-1">
-          <Link href={post.href} className="hover:text-[var(--primaryColor)] transition-colors">
+          <Link href={getHref(post)} className="hover:text-[var(--primaryColor)] transition-colors">
             {post.title}
           </Link>
         </h6>
@@ -114,7 +119,7 @@ export default function VideoNews() {
 
           {/* CENTER FEATURED CARD */}
           <div className="relative rounded-xl overflow-hidden w-full max-w-[425px] aspect-[425/374] flex flex-col justify-end p-[30px] order-1 lg:order-2 lg:mx-auto group">
-            <Link href={featured.href} className="absolute inset-0 z-0">
+            <Link href={getHref(featured)} className="absolute inset-0 z-0">
               <img
                 src={featured.image}
                 alt={featured.title}
@@ -128,7 +133,9 @@ export default function VideoNews() {
             <div className="relative z-[2] mt-auto">
               <CategoryPill label={featured.category.label} color={featured.category.color} />
               <h4 className="mt-[10px] text-[20px] lg:text-[22px] font-bold text-white leading-[1.3] line-clamp-2">
-                {featured.title}
+                <Link href={getHref(featured)} className="hover:text-[var(--primaryColor)] transition-colors">
+                  {featured.title}
+                </Link>
               </h4>
               <ul className="flex items-center gap-[12px] mt-[10px] text-[13px] text-white/70 flex-wrap">
                 <li className="flex items-center gap-1">

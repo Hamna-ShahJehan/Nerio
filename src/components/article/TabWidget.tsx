@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 type TabKey = "recent" | "popular" | "trendy";
 
@@ -10,6 +12,10 @@ const tabs: { key: TabKey; label: string }[] = [
   { key: "popular", label: "Popular" },
   { key: "trendy", label: "Trendy" },
 ];
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 export default function TabWidget() {
   const [activeTab, setActiveTab] = useState<TabKey>("recent");
@@ -35,16 +41,16 @@ export default function TabWidget() {
       <div>
         {posts.map((post, i) => (
           <div key={i} className="flex items-center gap-[16px] py-[15px] group">
-            <div className="w-[85px] h-[85px] rounded-full overflow-hidden flex-shrink-0">
+            <Link href={getHref(post)} className="w-[85px] h-[85px] rounded-full overflow-hidden flex-shrink-0">
               <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-            </div>
+            </Link>
             <div className="flex-1 min-w-0">
               <h6 className="text-[16px] font-normal text-black leading-[1.35] line-clamp-2 group-hover:text-primary transition-colors">
-                {post.title}
+                <Link href={getHref(post)}>{post.title}</Link>
               </h6>
               <ul className="fpg-post-meta flex flex-wrap items-center gap-[12px] mt-[10px] text-[13px] text-bodyColor">
                 <li>

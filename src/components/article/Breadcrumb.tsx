@@ -26,7 +26,7 @@ export default function Breadcrumb({
             <Link
               href="/"
               className="hover:text-primaryColor transition-colors"
-              title="Go to Sports News."
+              title="Go to Travel News."
             >
               <span>Home</span>
             </Link>

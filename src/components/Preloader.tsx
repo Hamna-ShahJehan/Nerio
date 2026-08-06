@@ -22,7 +22,7 @@ export default function Preloader() {
           <div className="loader-icon">
             <Image
               src="/assets/images/preloader.png"
-              alt="Sports News"
+              alt="Travel News"
               width={40}
               height={40}
             />
@@ -38,7 +38,7 @@ export default function Preloader() {
         <div className="loader-icon">
           <Image
             src="/assets/images/preloader.png"
-            alt="Sports News"
+            alt="Travel News"
             width={40}
             height={40}
           />

@@ -11,8 +11,8 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Sports News",
-  description: "Sports News - Your daily dose of sports updates",
+  title: "Travel News",
+  description: "Travel News - Your daily dose of travel updates",
 };
 
 export default function RootLayout({
