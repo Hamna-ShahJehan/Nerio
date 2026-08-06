@@ -1,9 +1,9 @@
 const categoryImages: Record<string, string> = {
-  Sports: "/assets/images/categories/sports.jpg",
-  Football: "/assets/images/categories/football.jpg",
-  Cricket: "/assets/images/categories/cricket.jpg",
-  Basketball: "/assets/images/categories/basketball.jpg",
-  Hockey: "/assets/images/categories/hockey.jpg",
+  Hotels: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop",
+  Flights: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=400&h=300&fit=crop",
+  Destinations: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop",
+  Traveling: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop",
+  "Travel Intelligence": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
 };
 
 export default function CategoriesWidget({

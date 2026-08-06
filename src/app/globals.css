@@ -1297,6 +1297,10 @@ ul {
 ======================== */
 .hero-section {
   background-color: #171A1E;
+  background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   overflow: hidden;
 }
 
@@ -1329,7 +1333,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("/assets/images/hero/banner-bg.webp");
+  background-image: url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=800&fit=crop");
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1584,9 +1588,9 @@ ul {
 .hero-recent {
   width: 310px;
   flex-shrink: 0;
-  
+
   padding: 30px 20px;
-  background-color: transparent;
+  background-color: #171A1E;
   border-radius: 0;
   align-self: stretch;
   display: flex;
@@ -2849,6 +2853,7 @@ ul {
     height: 15px;
   }
 }
+
 /* =========================================
    Article Page Styles (Hamna)
 ========================================= */
@@ -2856,10 +2861,10 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 8px;
-  text-align: center;
+  text-align: left;
 }
 
 .rstb-breadcrumb a {
@@ -2988,6 +2993,15 @@ ul {
     font-size: 14px;
     margin-top: 10px;
   }
+}
+
+/* Tags & Share Hover States */
+.inner-pill-item:hover {
+  color: var(--primaryColor) !important;
+}
+
+.rs-social-share .social-network:hover {
+  color: var(--primaryColor) !important;
 }
 
 /* Check Icon List */
@@ -3161,6 +3175,28 @@ ul {
 .fpg-unique-slider .swiper-button-prev::after,
 .fpg-unique-slider .swiper-button-next::after {
   font-size: 14px;
+}
+
+/* =========================================
+   Fix Related Posts Card Colors & Hovers
+========================================= */
+
+/* Force card title to be black by default and blue on hover */
+
+
+.fpg-post-title a:hover {
+  color: #007AFF !important;
+}
+
+/* Force author text/link to be dark gray by default and blue on hover */
+.fpg-post-meta a,
+.fpg-post-meta a:visited {
+  color: #4b5563 !important;
+  /* Tailwind gray-600 */
+}
+
+.fpg-post-meta a:hover {
+  color: #007AFF !important;
 }
 
 /* Sidebar Responsive */

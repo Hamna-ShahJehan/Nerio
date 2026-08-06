@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 const { heading, viewAllText, viewAllHref, cards } = data.topStories;
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 function ViewAllButton({ text, href }: { text: string; href: string }) {
   return (
@@ -63,7 +68,7 @@ function CategoryPill({ label, color }: { label: string; color: string }) {
 function LargeCard({ post }: { post: (typeof cards)[0] }) {
   return (
     <div className="group relative rounded-[12px] overflow-hidden h-full min-h-[495px] flex flex-col justify-end shadow-sm">
-      <Link href={post.href} className="absolute inset-0 z-0 block">
+      <Link href={getHref(post)} className="absolute inset-0 z-0 block">
         <img
           src={post.image}
           alt={post.title}
@@ -76,7 +81,7 @@ function LargeCard({ post }: { post: (typeof cards)[0] }) {
       <div className="relative p-[25px] z-[2]">
         <CategoryPill label={post.category.label} color={post.category.color} />
         <h4 className="mt-[10px] mb-[10px] text-[20px] font-bold text-white leading-[1.35]">
-          <Link href={post.href}>{post.title}</Link>
+          <Link href={getHref(post)}>{post.title}</Link>
         </h4>
         <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[14px] text-white/80">
           <li className="flex items-center gap-1">
@@ -111,7 +116,7 @@ function StandardCard({ post }: { post: (typeof cards)[1] }) {
   return (
     <div className="group relative bg-white border border-[var(--borderColor,#e5e7eb)] rounded-[12px] overflow-hidden h-full min-h-[495px] flex flex-col justify-between shadow-sm transition-all duration-300 hover:shadow-md p-[16px]">
       <div className="relative overflow-hidden rounded-[8px] h-[310px] flex-shrink-0">
-        <Link href={post.href} className="block w-full h-full">
+          <Link href={getHref(post)} className="block w-full h-full">
           <img
             src={post.image}
             alt={post.title}
@@ -125,7 +130,7 @@ function StandardCard({ post }: { post: (typeof cards)[1] }) {
         </div>
         <h4 className="mb-[6px] text-[18px] font-bold text-[var(--titleColor)] leading-[1.35] line-clamp-2">
           <Link
-            href={post.href}
+            href={getHref(post)}
             className="transition-colors duration-200 hover:text-[var(--primaryColor)]"
           >
             {post.title}

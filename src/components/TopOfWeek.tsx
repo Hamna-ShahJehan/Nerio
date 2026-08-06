@@ -3,9 +3,14 @@
 import { useState, type ReactElement } from "react";
 import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 const { heading, viewAllText, viewAllHref, articles, tabs, weather, social, tags } =
   data.topOfWeek;
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 type TabKey = "recent" | "popular" | "trendy";
 const tabLabels: { key: TabKey; label: string }[] = [
@@ -44,7 +49,7 @@ function CategoryPill({ label, color }: { label: string; color: string }) {
 function ArticleCard({ post }: { post: (typeof articles)[0] }) {
   return (
     <div className="tw-article-card group flex flex-col md:flex-row items-center md:items-stretch gap-[25px] p-3 rounded-[10px] border border-[var(--borderColor)] overflow-hidden transition-all duration-300">
-      <Link href={post.href} className="block w-full md:w-[320px] aspect-[16/10] md:aspect-auto md:h-auto flex-shrink-0 rounded-[10px] overflow-hidden relative group/img">
+      <Link href={getHref(post)} className="block w-full md:w-[320px] aspect-[16/10] md:aspect-auto md:h-auto flex-shrink-0 rounded-[10px] overflow-hidden relative group/img">
         <img
           src={post.image}
           alt={post.title}
@@ -55,7 +60,7 @@ function ArticleCard({ post }: { post: (typeof articles)[0] }) {
         <div>
           <CategoryPill label={post.category.label} color={post.category.color} />
           <h4 className="mt-[9px] mb-[7px] text-[18px] font-bold text-[var(--titleColor)] leading-[1.4]">
-            <Link href={post.href} className="transition-colors duration-300 group-hover:text-[var(--primaryColor)]">
+            <Link href={getHref(post)} className="transition-colors duration-300 group-hover:text-[var(--primaryColor)]">
               {post.title}
             </Link>
           </h4>
@@ -91,7 +96,7 @@ function ArticleCard({ post }: { post: (typeof articles)[0] }) {
 function TabCard({ post }: { post: (typeof tabs.recent)[0] }) {
   return (
     <div className="tw-tab-card flex items-center gap-[15px]">
-      <Link href={post.href} className="block flex-shrink-0 w-[80px] h-[80px] rounded-full overflow-hidden group">
+      <Link href={getHref(post)} className="block flex-shrink-0 w-[80px] h-[80px] rounded-full overflow-hidden group">
         <img
           src={post.image}
           alt={post.title}
@@ -100,7 +105,7 @@ function TabCard({ post }: { post: (typeof tabs.recent)[0] }) {
       </Link>
       <div className="flex-1 min-w-0">
         <h6 className="text-[14px] font-semibold text-[var(--titleColor)] leading-[1.35] line-clamp-2 mb-[7px]">
-          <Link href={post.href} className="hover:text-[var(--primaryColor)] transition-colors">
+          <Link href={getHref(post)} className="hover:text-[var(--primaryColor)] transition-colors">
             {post.title}
           </Link>
         </h6>

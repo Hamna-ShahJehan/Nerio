@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="footer-logo">
               <Image
                 src="/assets/images/footer/logo.png"
-                alt="Sports News"
+                alt="Travel News"
                 width={120}
                 height={30}
                 priority={false}
@@ -245,7 +245,7 @@ export default function Footer() {
         <div className="nerio-container">
           <div className="footer-copyright-inner">
             <p className="footer-copyright-text">
-              &copy; 2026 Sports News. Powered by{" "}
+              &copy; 2026 Travel News. Powered by{" "}
               <a href="https://rstheme.com/">RSTheme</a>
             </p>
             <div className="footer-copyright-links">

@@ -4,9 +4,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
+import Link from "next/link";
 import data from "@/data/data.json";
+import { generateSlug } from "@/lib/slug";
 
 const { featured, featuredCards, recentNews } = data.hero;
+
+function getHref(item: { href: string; title: string }) {
+  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+}
 
 export default function Hero() {
   return (
@@ -16,8 +22,8 @@ export default function Hero() {
         <div className="hero-featured">
           <div className="hero-featured-content">
             <div className="hero-post-cat">
-              <a
-                href={featured.href}
+              <Link
+                href={getHref(featured)}
                 className="post-cat"
                 style={{
                   "--catCurrentBgColor": featured.category.color,
@@ -25,19 +31,19 @@ export default function Hero() {
                 } as React.CSSProperties}
               >
                 {featured.category.label}
-              </a>
+              </Link>
             </div>
             <h1 className="hero-post-title">
-              <a href={featured.href}>{featured.title}</a>
+              <Link href={getHref(featured)}>{featured.title}</Link>
             </h1>
             <ul className="hero-post-meta">
               <li>
                 <span className="fpg-meta">
                   <span>
                     By{" "}
-                    <a href="#" className="fpg-author-link">
+                    <span className="fpg-author-link">
                       {featured.author}
-                    </a>
+                    </span>
                   </span>
                 </span>
               </li>
@@ -53,7 +59,7 @@ export default function Hero() {
               </li>
             </ul>
             <div className="fpg-btn-wrapper">
-              <a href={featured.href}>{featured.buttonText}</a>
+              <Link href={getHref(featured)}>{featured.buttonText}</Link>
             </div>
           </div>
 
@@ -75,15 +81,15 @@ export default function Hero() {
                 <SwiperSlide key={i} className="h-auto">
                   <div className="hero-featured-card">
                     <div className="fpg-post-thumb">
-                      <a href={post.href} className="image-link">
+                      <Link href={getHref(post)} className="image-link">
                         <img src={post.image} alt="" width={300} height={149} />
-                      </a>
+                      </Link>
                     </div>
                     <div className="fpg-post-content">
                       <div className="fpg-post-content-inner">
                         <div className="fpg-post-cat">
-                          <a
-                            href={post.href}
+                          <Link
+                            href={getHref(post)}
                             className="post-cat"
                             style={{
                               "--catCurrentBgColor": post.category.color,
@@ -91,10 +97,12 @@ export default function Hero() {
                             } as React.CSSProperties}
                           >
                             {post.category.label}
-                          </a>
+                          </Link>
                         </div>
                         <h6 className="fpg-post-title">
-                          <a href={post.href}>{post.title}</a>
+                          <Link href={getHref(post)} className="text-white hover:text-primary transition-colors">
+                            {post.title}
+                          </Link>
                         </h6>
                       </div>
                       <ul className="fpg-post-meta">
@@ -102,9 +110,9 @@ export default function Hero() {
                           <span className="fpg-meta">
                             <span>
                               By{" "}
-                              <a href="#" className="fpg-author-link">
+                              <span className="fpg-author-link">
                                 {post.author}
-                              </a>
+                              </span>
                             </span>
                           </span>
                         </li>
@@ -126,7 +134,7 @@ export default function Hero() {
         <div className="hero-recent">
           <div className="hero-recent-header">
             <h4>{recentNews.heading}</h4>
-            <a href={recentNews.viewAllHref} className="hero-view-all-btn">
+            <Link href={recentNews.viewAllHref} className="hero-view-all-btn">
               <span className="button-text" data-text={recentNews.viewAllText}>
                 {recentNews.viewAllText}
               </span>
@@ -139,21 +147,21 @@ export default function Hero() {
                   />
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
           <div className="hero-recent-grid">
             {recentNews.posts.map((post, i) => (
               <div className="fpg-card-style style-two" key={i}>
                 <div className="fpg-post-thumb">
-                  <a href={post.href} className="image-link">
+                  <Link href={getHref(post)} className="image-link">
                     <img src={post.image} alt="" width={300} height={149} />
-                  </a>
+                  </Link>
                 </div>
                 <div className="fpg-post-content">
                   <div className="fpg-post-content-inner">
                     <div className="fpg-post-cat">
-                      <a
-                        href={post.href}
+                      <Link
+                        href={getHref(post)}
                         className="post-cat"
                         style={{
                           "--catCurrentBgColor": post.category.color,
@@ -161,10 +169,10 @@ export default function Hero() {
                         } as React.CSSProperties}
                       >
                         {post.category.label}
-                      </a>
+                      </Link>
                     </div>
                     <h6 className="fpg-post-title">
-                      <a href={post.href}>{post.title}</a>
+                      <Link href={getHref(post)}>{post.title}</Link>
                     </h6>
                   </div>
                   <ul className="fpg-post-meta">
@@ -172,9 +180,9 @@ export default function Hero() {
                       <span className="fpg-meta">
                         <span>
                           By{" "}
-                          <a href="#" className="fpg-author-link">
+                          <span className="fpg-author-link">
                             {post.author}
-                          </a>
+                          </span>
                         </span>
                       </span>
                     </li>
