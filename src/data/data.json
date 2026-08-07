@@ -171,22 +171,22 @@
     ],
     "tabs": {
       "recent": [
-        { "title": "Local football club strengthens playoff chances", "href": "/local-football-club-strengthens-playoff-chances", "author": "Matt Rosnor", "views": "98", "image": "/assets/images/top-week/tabs/tab-1.jpg" },
-        { "title": "Veteran cricket bowler announces return to form", "href": "/veteran-cricket-bowler-announces-return-to-form-as-team", "author": "Matt Rosnor", "views": "83", "image": "/assets/images/top-week/tabs/tab-2.jpg" },
-        { "title": "Marathon runner breaks personal best time while", "href": "#", "author": "Matt Rosnor", "views": "79", "image": "/assets/images/top-week/tabs/tab-3.jpg" },
-        { "title": "Coach expresses confidence in young squad development", "href": "#", "author": "Matt Rosnor", "views": "46", "image": "/assets/images/top-week/tabs/tab-4.jpg" }
+        { "title": "Top 10 luxury hotels in Dubai for 2025", "href": "/top-luxury-hotels-in-dubai-for-2025", "author": "Matt Rosnor", "views": "98", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&h=200&fit=crop" },
+        { "title": "Emirates launches new direct routes to Southeast Asia", "href": "/emirates-launches-new-direct-routes-to-southeast-asia", "author": "Matt Rosnor", "views": "83", "image": "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=200&h=200&fit=crop" },
+        { "title": "Santorini the ultimate Greek island escape", "href": "/santorini-ultimate-greek-island-guide", "author": "Matt Rosnor", "views": "79", "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=200&h=200&fit=crop" },
+        { "title": "Why solo travel is becoming the biggest trend of 2025", "href": "/solo-travel-biggest-trend-2025", "author": "Matt Rosnor", "views": "151", "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=200&h=200&fit=crop" }
       ],
       "popular": [
-        { "title": "Family travel: tun and safe destinations for", "href": "#", "author": "Matt Rosnor", "views": "24", "image": "/assets/images/top-week/tabs/tab-5.jpg" },
-        { "title": "Professional golf tournament concludes with close finish", "href": "#", "author": "Matt Rosnor", "views": "27", "image": "/assets/images/top-week/tabs/tab-6.jpg" },
-        { "title": "Fans witness emotional ceremony honoring legendary player", "href": "#", "author": "Matt Rosnor", "views": "31", "image": "/assets/images/top-week/tabs/tab-7.jpg" },
-        { "title": "Star basketball player leads team scoring while", "href": "#", "author": "Matt Rosnor", "views": "32", "image": "/assets/images/top-week/tabs/tab-8.jpg" }
+        { "title": "Global tourism recovery forecast looks promising", "href": "/global-tourism-recovery-what-the-numbers-tell-us", "author": "Matt Rosnor", "views": "142", "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=200&h=200&fit=crop" },
+        { "title": "Bali's hidden temples and rice terraces await adventurous travelers", "href": "/balis-hidden-temples-and-rice-terracess-await-adventurous-travelers", "author": "Matt Rosnor", "views": "64", "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=200&h=200&fit=crop" },
+        { "title": "Budget airlines expand European networks with new ultra-low fares", "href": "/budget-airlines-expand-european-networks-with-new-ultra-low-fares", "author": "Matt Rosnor", "views": "71", "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=200&h=200&fit=crop" },
+        { "title": "How AI is reshaping the way we plan vacations", "href": "/how-ai-is-reshaping-the-way-we-plan-vacations", "author": "Matt Rosnor", "views": "40", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=200&fit=crop" }
       ],
       "trendy": [
-        { "title": "Breaking sports news faster than ever", "href": "/breaking-sports-news-faster-than-ever", "author": "Matt Rosnor", "views": "151", "image": "/assets/images/top-week/tabs/tab-9.jpg" },
-        { "title": "Ice hockey team celebrat featur defensive pressure", "href": "#", "author": "Matt Rosnor", "views": "80", "image": "/assets/images/top-week/tabs/tab-10.jpg" },
-        { "title": "Track and field athletes continue preparations for", "href": "#", "author": "Matt Rosnor", "views": "71", "image": "/assets/images/top-week/tabs/tab-11.jpg" },
-        { "title": "Battle royale games still reigning supreme", "href": "#", "author": "Matt Rosnor", "views": "77", "image": "/assets/images/top-week/tabs/tab-12.jpg" }
+        { "title": "Boutique Hotels in Marrakech You Need to Experience", "href": "/boutique-hotels-in-marrakech-you-need-to-experience", "author": "Matt Rosnor", "views": "176", "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=200&h=200&fit=crop" },
+        { "title": "Vietnam's Ha Long Bay cruises showcase emerald waters and karsts", "href": "/vietnams-ha-long-bay-cruises-showcase-emerald-waters-and-karsts", "author": "Matt Rosnor", "views": "80", "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=200&h=200&fit=crop" },
+        { "title": "Swiss Alps train journeys deliver postcard-perfect mountain views", "href": "/swiss-alps-train-journeys-deliver-postcard-perfect-mountain-views", "author": "Matt Rosnor", "views": "51", "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=200&h=200&fit=crop" },
+        { "title": "Digital nomad visas now available in over 50 countries", "href": "/digital-nomad-visas-now-available-in-over-50-countries", "author": "Matt Rosnor", "views": "27", "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&h=200&fit=crop" }
       ]
     },
     "weather": {
@@ -418,7 +418,7 @@
       "category": { "label": "Hotels", "color": "#e033e0" },
       "author": {
         "name": "Matt Rosnor",
-        "avatar": "/assets/images/hero/recent-1.jpg",
+        "avatar": "/assets/images/article/tm-img0041-500x500.jpg",
         "bio": "Matt Rosnor reviews boutique hotels and unique accommodations across North Africa and the Middle East."
       },
       "date": "January 4, 2025",
