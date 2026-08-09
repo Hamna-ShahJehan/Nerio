@@ -34,7 +34,7 @@ interface Props {
     ad: NativeAdData;
     variant?: "grid" | "list";
     /** Force a specific card style — overrides ad.nativeContent.cardStyle */
-    cardStyle?: "news-grid" | "hero-featured" | "hero-recent" | "sidebar-list" | "sidebar-featured" | "latest-articles" | "hero-side" | "review-list" | "carousel" | "most-viewed" | "social-card" | "popular-articles" | "travel-intel" | "top-destinations" | "sidebar-tabs" | "top-flights" | "article-inline" | "related-articles" | "sidebar-ad";
+    cardStyle?: "news-grid" | "hero-featured" | "hero-recent" | "latest-articles" | "sidebar-list" | "sidebar-featured" | "hero-side" | "review-list" | "carousel" | "most-viewed" | "social-card" | "popular-articles" | "travel-intel" | "top-destinations" | "sidebar-tabs" | "top-flights" | "article-inline" | "related-articles" | "sidebar-ad";
     position?: string;
     pageType?: string;
     className?: string;
@@ -557,54 +557,6 @@ export default function NativeAdCard({ ad, variant: variantProp, cardStyle: card
         );
     }
 
-    // ── "latest-articles" style: image left, text right ─────────────
-    if (cardStyle === "latest-articles") {
-        return (
-            <div
-                ref={containerRef}
-                className="group flex flex-row gap-4 mb-4 pb-4 cursor-pointer"
-                onClick={handleClick}
-                role="link"
-                tabIndex={0}
-                aria-label={`Sponsored: ${nc.title}`}
-            >
-                <div className="shrink-0 relative" style={{ flex: "0 0 45%" }}>
-                    {nc.image ? (
-                        <img
-                            src={nc.image}
-                            alt={nc.title || "Sponsored content"}
-                            className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                            style={{ height: style.imageHeight }}
-                        />
-                    ) : (
-                        <div className="w-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900" style={{ height: style.imageHeight }} />
-                    )}
-                    <div className="absolute flex items-center justify-center rounded-full z-1" style={{ backgroundColor: "#eb0254", color: "#fff", height: "30px", width: "30px", fontSize: "13px", top: "-15px", left: "20px" }}>
-                        <i className="fa-solid fa-bolt-lightning" />
-                    </div>
-                </div>
-                <div className="min-w-0" style={{ flex: "1 1 65%" }}>
-                    {nc.category && style.showCategory && (
-                        <span className="inline-block mb-1" style={{ backgroundColor: nc.categoryColor || "#eb0254", color: "#fff", fontSize: "12px", padding: "0px 8px", lineHeight: "18px", textTransform: "uppercase" }}>
-                            {nc.category}
-                        </span>
-                    )}
-                    <h4 className="font-normal md:font-bold leading-tight mb-1" style={{ fontSize: style.titleSize, lineHeight: style.titleLineHeight, color: "var(--heading-color, #fff)" }}>
-                        {nc.title}
-                    </h4>
-                    <div className="flex items-center gap-2 mb-2" style={{ fontSize: "12px", color: "var(--meta-fcolor, #888)" }}>
-                        {(nc.author || nc.sponsorName) && style.showAuthor && (
-                            <span>By <span style={{ fontWeight: 700, color: "var(--heading-color, #fff)" }}>{nc.author || nc.sponsorName}</span></span>
-                        )}
-                    </div>
-                    {nc.excerpt && style.showExcerpt && (
-                        <p className="text-sm line-clamp-2 hidden sm:block" style={{ color: "var(--excerpt-color, #bbb)" }}>{nc.excerpt}</p>
-                    )}
-                </div>
-            </div>
-        );
-    }
-
     // ── "sidebar-featured" style: full-width image + title + excerpt ─
     if (cardStyle === "sidebar-featured") {
         const sfImgWidth = (style as any).imageWidth;
@@ -762,6 +714,43 @@ export default function NativeAdCard({ ad, variant: variantProp, cardStyle: card
                     </div>
                 </div>
             </div>
+        );
+    }
+
+    // ── "latest-articles" style: matches BreakingNews side posts (100×85 thumb + badge + title) ──
+    // Returns Fragment so image & text are direct children of the InFeedNativeAd wrapper
+    if (cardStyle === "latest-articles") {
+        return (
+            <>
+                <div className="flex-shrink-0 relative overflow-hidden rounded-lg" style={{ width: "100px", height: "85px" }}>
+                    {nc.image ? (
+                        <img src={nc.image} alt={nc.title || "Sponsored content"} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+                    ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900" />
+                    )}
+                </div>
+                <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
+                    {nc.category && (
+                        <span className="inline-block w-fit" style={{ backgroundColor: nc.categoryColor || "#ef4444", color: "#fff", fontSize: "11px", padding: "0px 6px", lineHeight: "16px", textTransform: "uppercase", fontWeight: 600 }}>
+                            {nc.category}
+                        </span>
+                    )}
+                    <h6 className="text-sm font-semibold leading-[1.35] line-clamp-2" style={{ color: "var(--titleColor, #121213)" }}>
+                        {nc.title}
+                    </h6>
+                    <ul className="flex items-center gap-2 text-[11px]" style={{ color: "var(--bodyColor, #616C74)" }}>
+                        {(nc.author || nc.sponsorName) && (
+                            <li className="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-3 h-3 fill-current opacity-50"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                <span>By <span style={{ color: "var(--bodyColor, #616C74)" }}>{nc.author || nc.sponsorName}</span></span>
+                            </li>
+                        )}
+                        <li className="flex items-center gap-1">
+                            <span>Sponsored</span>
+                        </li>
+                    </ul>
+                </div>
+            </>
         );
     }
 

@@ -1,133 +1,61 @@
 {
   "_meta": {
-    "generated": "2026-07-31T00:00:00.000Z",
-    "description": "Canonical list of ad positions extracted from templates — synced with dashboard PAGE_CONFIG"
+    "generated": "2026-08-09T00:00:00.000Z",
+    "description": "Canonical list of ad positions — synced with dashboard PAGE_CONFIG and AdSettingsPanel"
   },
   "pageTypes": [
     {
       "type": "homepage",
       "label": "Homepage",
       "positions": [
-        {
-          "id": "top-leaderboard",
-          "name": "Top Leaderboard Ad (ATF)",
-          "description": "Above the fold, highest visibility",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "sticky-footer",
-          "name": "Sticky Footer Ad",
-          "description": "Persistent at bottom of page",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "in-feed-1",
-          "name": "In-Feed Native 1",
-          "description": "Between Card #3 and #4",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "in-feed-2",
-          "name": "In-Feed Native 2",
-          "description": "Below the 6-item grid",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "in-feed-x",
-          "name": "In-Feed Native X (Repeating)",
-          "description": "Repeats every 10 cards",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "sidebar-sticky",
-          "name": "Sidebar Sticky",
-          "description": "Right sidebar, follows scroll",
-          "template": "HomeTemplate.tsx"
-        },
-        {
-          "id": "in-content-1",
-          "name": "Sidebar Rectangle",
-          "description": "Right sidebar, below social counters",
-          "template": "HomeTemplate.tsx"
-        }
+        { "id": "top-leaderboard", "name": "Top Leaderboard (ATF)", "description": "Banner above Hero section", "template": "HomeTemplate.tsx" },
+        { "id": "mid-leaderboard-1", "name": "Mid Leaderboard 1", "description": "Banner between Hero ↔ Hotels (breaking-section)", "template": "HomeTemplate.tsx" },
+        { "id": "mid-leaderboard-2", "name": "Mid Leaderboard 2", "description": "Banner between Hotels ↔ Travel Intelligence (video-news-section)", "template": "HomeTemplate.tsx" },
+        { "id": "mid-leaderboard-3", "name": "Mid Leaderboard 3", "description": "Banner between Travel Intelligence ↔ Destinations (top-of-week-section)", "template": "HomeTemplate.tsx" },
+        { "id": "mid-leaderboard-4", "name": "Mid Leaderboard 4", "description": "Banner between Destinations ↔ Flights (top-stories-section)", "template": "HomeTemplate.tsx" },
+        { "id": "bottom-leaderboard", "name": "Bottom Leaderboard", "description": "Banner after Flights section / Before Subscribe", "template": "HomeTemplate.tsx" },
+        { "id": "sticky-footer", "name": "Sticky Footer", "description": "Persistent at bottom of viewport", "template": "HomeTemplate.tsx" },
+        { "id": "in-feed-1", "name": "In-Feed: Hero Recent News", "description": "hero-section → .hero-recent-grid — matches recent news cards", "template": "Hero.tsx" },
+        { "id": "in-feed-2", "name": "In-Feed: Hero Slider", "description": "hero-section → .hero-featured-cards Swiper — matches slider cards", "template": "Hero.tsx" },
+        { "id": "in-feed-3", "name": "In-Feed: Hotels Side Cards", "description": "breaking-section → right column — matches side posts", "template": "BreakingNews.tsx" },
+        { "id": "in-feed-4", "name": "In-Feed: Hotels Carousel", "description": "breaking-section → .fpg-post-slider Swiper — matches carousel slides", "template": "BreakingNews.tsx" },
+        { "id": "in-feed-5", "name": "In-Feed: Travel Intel Left", "description": "video-news-section → left column — matches side cards", "template": "VideoNews.tsx" },
+        { "id": "in-feed-6", "name": "In-Feed: Travel Intel Right", "description": "video-news-section → right column — matches side cards", "template": "VideoNews.tsx" },
+        { "id": "in-feed-7", "name": "In-Feed: Destinations Grid", "description": "top-of-week-section → 2-col article grid — matches ArticleCard", "template": "TopOfWeek.tsx" },
+        { "id": "in-feed-8", "name": "In-Feed: Destinations Tabs", "description": "top-of-week-section → sidebar TabWidget — matches tab items", "template": "TopOfWeek.tsx" },
+        { "id": "in-feed-9", "name": "In-Feed: Flights Small Cards", "description": "top-stories-section → right column — matches small cards", "template": "TopStories.tsx" },
+        { "id": "in-feed-x", "name": "In-Feed: Repeating", "description": "Repeating native slot — adaptive card matching surrounding feed", "template": "various" }
       ]
     },
     {
       "type": "article",
-      "label": "Article",
+      "label": "Article Page",
       "positions": [
-        {
-          "id": "top-leaderboard",
-          "name": "Top Leaderboard Ad (ATF)",
-          "description": "Above the fold",
-          "template": "ArticleTemplate.tsx"
-        },
-        {
-          "id": "atf-rectangle",
-          "name": "ATF Rectangle Ad (Highest Value)",
-          "description": "Highest value position",
-          "template": "ArticleTemplate.tsx"
-        },
-        {
-          "id": "sticky-footer",
-          "name": "Sticky Footer Ad",
-          "description": "Persistent at bottom",
-          "template": "ArticleTemplate.tsx"
-        },
-        {
-          "id": "in-content-1",
-          "name": "In-Content 1",
-          "description": "After Paragraph 2",
-          "template": "ArticleTemplate.tsx"
-        },
-        {
-          "id": "in-content-2",
-          "name": "In-Content 2",
-          "description": "After Paragraph 6",
-          "template": "ArticleTemplate.tsx"
-        },
-        {
-          "id": "sidebar-sticky",
-          "name": "Sidebar Sticky",
-          "description": "Desktop only, follows scroll",
-          "template": "ArticleTemplate.tsx"
-        }
+        { "id": "top-leaderboard", "name": "Top Leaderboard (ATF)", "description": "Banner above article content", "template": "ArticleTemplate.tsx" },
+        { "id": "atf-rectangle", "name": "Below Featured Image", "description": "Banner between FeaturedImage ↔ ArticleTitle", "template": "ArticleTemplate.tsx" },
+        { "id": "bottom-leaderboard", "name": "Bottom Leaderboard", "description": "Banner below RelatedPosts / Before Footer", "template": "ArticleTemplate.tsx" },
+        { "id": "sticky-footer", "name": "Sticky Footer", "description": "Persistent at bottom of viewport", "template": "ArticleTemplate.tsx" },
+        { "id": "in-content-1", "name": "In-Content: After Para 2", "description": "ArticleBody → native after 2nd paragraph", "template": "ArticleBody.tsx" },
+        { "id": "in-content-2", "name": "In-Content: After Para 4", "description": "ArticleBody → native after 4th paragraph", "template": "ArticleBody.tsx" },
+        { "id": "in-feed-related", "name": "Related Posts Carousel", "description": "RelatedPosts → native slide matching related cards", "template": "RelatedPosts.tsx" },
+        { "id": "sidebar-sticky", "name": "Sidebar Sticky", "description": "Sidebar → below TabWidget — native matching sidebar cards", "template": "Sidebar.tsx" },
+        { "id": "follow-native", "name": "Follow Widget", "description": "FollowWidget → 4th slot — native matching social cards", "template": "FollowWidget.tsx" }
       ]
     },
     {
       "type": "category",
-      "label": "Category",
+      "label": "Category Page",
       "positions": [
-        {
-          "id": "top-leaderboard",
-          "name": "Top Leaderboard (ATF)",
-          "description": "Above the fold",
-          "template": "CategoryTemplate.tsx"
-        },
-        {
-          "id": "sticky-footer",
-          "name": "Sticky Footer Ad",
-          "description": "Persistent at bottom",
-          "template": "CategoryTemplate.tsx"
-        },
-        {
-          "id": "in-feed-x",
-          "name": "In-Feed Ad (Repeating)",
-          "description": "Repeats every 8 posts",
-          "template": "CategoryTemplate.tsx"
-        }
+        { "id": "top-leaderboard", "name": "Top Leaderboard", "description": "Above the fold", "template": "CategoryTemplate.tsx" },
+        { "id": "sticky-footer", "name": "Sticky Footer", "description": "Persistent at bottom of viewport", "template": "CategoryTemplate.tsx" },
+        { "id": "in-feed-x", "name": "In-Feed Ad (Repeating)", "description": "Repeating native — every 8 posts, matches article card style", "template": "CategoryTemplate.tsx" }
       ]
     },
     {
       "type": "website",
       "label": "Static/Legal Pages",
       "positions": [
-        {
-          "id": "sticky-footer",
-          "name": "Sticky Footer Ad",
-          "description": "Persistent at bottom",
-          "template": "various"
-        }
+        { "id": "sticky-footer", "name": "Sticky Footer", "description": "Persistent at bottom of viewport", "template": "various" }
       ]
     }
   ]

@@ -308,13 +308,18 @@ export default function Header() {
             <div className="header-top-inner">
               {/* Logo */}
               <Link href="/" className="rstb-site-logo">
-                <Image
+                {/* <Image
                   src="/assets/images/logo.png"
                   alt="Travel News"
                   width={100}
                   height={35}
                   priority
-                />
+                /> */}
+                <h2 className="text-xxl text-white font-bold ml-0">
+                  <span className="text-[#0073FF]">Cockpit</span>
+                  <span className="text-white">.</span>
+                  <span className="text-white" style={{ marginLeft: '-0.40rem' }}>Travel</span>
+                </h2>
               </Link>
 
               {/* Navigation */}
@@ -647,14 +652,19 @@ export default function Header() {
             <div className="nerio-container">
               <div className="header-top-inner" style={{ minHeight: 70 }}>
                 <Link href="/" className="rstb-site-logo">
-                  <Image
+                  {/* <Image
                     src="/assets/images/logo.png"
                     alt="Travel News"
                     width={150}
                     height={35}
                     style={{ height: 35, width: "auto" }}
                     priority
-                  />
+                  /> */}
+                  <h2 className="text-xxl text-white font-bold ml-0">
+                    <span className="text-[#0073FF]">Cockpit</span>
+                    <span className="text-white">.</span>
+                    <span className="text-white" style={{ marginLeft: '-0.40rem' }}>Travel</span>
+                  </h2>
                 </Link>
 
                 <nav className="rstb-nav-menu nav-breakpoint-lg">
@@ -741,8 +751,8 @@ export default function Header() {
                             ))}
                           </ul>
                         )}
-                    </li>
-                  ))}
+                      </li>
+                    ))}
                   </ul>
 
                   {/* Mobile Menu Toggler */}

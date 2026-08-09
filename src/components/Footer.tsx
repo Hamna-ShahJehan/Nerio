@@ -71,13 +71,18 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="footer-brand" style={{ flex: "1 1 280px" }}>
             <div className="footer-logo">
-              <Image
+              {/* <Image
                 src="/assets/images/footer/logo.png"
                 alt="Travel News"
                 width={120}
                 height={30}
                 priority={false}
-              />
+              /> */}
+              <h2 className="text-xxl text-white font-bold ml-0">
+                <span className="text-[#0073FF]">Cockpit</span>
+                <span className="text-white">.</span>
+                <span className="text-white" style={{ marginLeft: '-0.10rem' }}>Travel</span>
+              </h2>
             </div>
             <p className="footer-desc">
               We love to bring to life as a developer and I aim the today do
