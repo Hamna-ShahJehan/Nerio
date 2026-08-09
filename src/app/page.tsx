@@ -1,11 +1,17 @@
 import Preloader from "@/components/Preloader";
 import HomeTemplate from "@/components/HomeTemplate";
+import { fetchArticles, fetchCategories } from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+  const [{ articles }, categories] = await Promise.all([
+    fetchArticles({ limit: 100 }),
+    fetchCategories(),
+  ]);
+
   return (
     <>
       <Preloader />
-      <HomeTemplate />
+      <HomeTemplate articles={articles} categories={categories} />
     </>
   );
 }

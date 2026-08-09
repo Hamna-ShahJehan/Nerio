@@ -1,16 +1,27 @@
+import InFeedNativeAd from "@/components/ads/InFeedNativeAd";
+
 export default function ArticleBody({
   content,
 }: {
-  content: { type: string; text?: string; src?: string; images?: string[]; author?: string; items?: string[] }[];
+  content?: { type: string; text?: string; src?: string; images?: string[]; author?: string; items?: string[] }[];
 }) {
+  if (!content?.length) return null;
+
+  let paragraphCount = 0;
+
   return (
     <div className="rstb-post-content mb-[30px]">
       {content.map((block, i) => {
         if (block.type === "paragraph") {
+          paragraphCount++;
           return (
-            <p key={i} className="text-bodyColor text-[16px] leading-[1.75] mb-[20px]">
-              {block.text}
-            </p>
+            <>
+              <p key={i} className="text-bodyColor text-[16px] leading-[1.75] mb-[20px]">
+                {block.text}
+              </p>
+              {paragraphCount === 2 && <InFeedNativeAd position="in-content-1" cardStyle="article-inline" pageType="article" />}
+              {paragraphCount === 4 && <InFeedNativeAd position="in-content-2" cardStyle="article-inline" pageType="article" />}
+            </>
           );
         }
 

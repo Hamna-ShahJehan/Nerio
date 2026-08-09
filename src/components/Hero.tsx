@@ -5,20 +5,55 @@ import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 import Link from "next/link";
-import data from "@/data/data.json";
 import { generateSlug } from "@/lib/slug";
+import InFeedNativeAd from "@/components/ads/InFeedNativeAd";
 
-const { featured, featuredCards, recentNews } = data.hero;
-
-function getHref(item: { href: string; title: string }) {
-  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
+interface Article {
+  slug: string;
+  title: string;
+  category: string;
+  categoryLabel: string;
+  image?: string;
+  author: string;
+  authorName: string;
+  views: number;
+  date: string;
+  excerpt?: string;
 }
 
-export default function Hero() {
+interface HeroProps {
+  featured: Article;
+  featuredCards: Article[];
+  recentNews: Article[];
+}
+
+const categoryColors: Record<string, string> = {
+  hotels: "#e033e0",
+  flights: "#0073ff",
+  destinations: "#54bd05",
+  traveling: "#f27100",
+  "travel-intelligence": "#f27100",
+};
+
+function getHref(article: Article) {
+  return `/${article.slug}`;
+}
+
+function formatDate(dateStr: string) {
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  } catch {
+    return dateStr;
+  }
+}
+
+export default function Hero({ featured, featuredCards, recentNews }: HeroProps) {
+  const featuredColor = categoryColors[featured.category] || "#f27100";
+
   return (
     <section className="hero-section">
       <div className="hero-inner">
-        {/* LEFT COLUMN — Featured post + cards below */}
         <div className="hero-featured">
           <div className="hero-featured-content">
             <div className="hero-post-cat">
@@ -26,11 +61,11 @@ export default function Hero() {
                 href={getHref(featured)}
                 className="post-cat"
                 style={{
-                  "--catCurrentBgColor": featured.category.color,
+                  "--catCurrentBgColor": featuredColor,
                   "--catCurrentColor": "#ffffff",
                 } as React.CSSProperties}
               >
-                {featured.category.label}
+                {featured.categoryLabel}
               </Link>
             </div>
             <h1 className="hero-post-title">
@@ -42,28 +77,27 @@ export default function Hero() {
                   <span>
                     By{" "}
                     <span className="fpg-author-link">
-                      {featured.author}
+                      {featured.authorName}
                     </span>
                   </span>
                 </span>
               </li>
               <li>
                 <span className="fpg-meta">
-                  <i className="ri-pulse-fill" /> {featured.views}
+                  <i className="ri-pulse-fill" /> {featured.views} Views
                 </span>
               </li>
               <li>
                 <span className="fpg-meta">
-                  <i className="ri-calendar-line" /> {featured.date}
+                  <i className="ri-calendar-line" /> {formatDate(featured.date)}
                 </span>
               </li>
             </ul>
             <div className="fpg-btn-wrapper">
-              <Link href={getHref(featured)}>{featured.buttonText}</Link>
+              <Link href={getHref(featured)}>Read Article</Link>
             </div>
           </div>
 
-          {/* Featured cards carousel below the button */}
           <div className="hero-featured-cards">
             <Swiper
               modules={[Autoplay]}
@@ -92,11 +126,11 @@ export default function Hero() {
                             href={getHref(post)}
                             className="post-cat"
                             style={{
-                              "--catCurrentBgColor": post.category.color,
+                              "--catCurrentBgColor": categoryColors[post.category] || "#f27100",
                               "--catCurrentColor": "#ffffff",
                             } as React.CSSProperties}
                           >
-                            {post.category.label}
+                            {post.categoryLabel}
                           </Link>
                         </div>
                         <h6 className="fpg-post-title">
@@ -111,7 +145,7 @@ export default function Hero() {
                             <span>
                               By{" "}
                               <span className="fpg-author-link">
-                                {post.author}
+                                {post.authorName}
                               </span>
                             </span>
                           </span>
@@ -126,17 +160,19 @@ export default function Hero() {
                   </div>
                 </SwiperSlide>
               ))}
+              <SwiperSlide className="h-auto">
+                <InFeedNativeAd position="in-feed-2" cardStyle="hero-featured" className="hero-featured-card" />
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
 
-        {/* RIGHT COLUMN — Recent News */}
         <div className="hero-recent">
           <div className="hero-recent-header">
-            <h4>{recentNews.heading}</h4>
-            <Link href={recentNews.viewAllHref} className="hero-view-all-btn">
-              <span className="button-text" data-text={recentNews.viewAllText}>
-                {recentNews.viewAllText}
+            <h4>Recent News</h4>
+            <Link href="/blog" className="hero-view-all-btn">
+              <span className="button-text" data-text="View All">
+                View All
               </span>
               <span className="button-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
@@ -150,7 +186,7 @@ export default function Hero() {
             </Link>
           </div>
           <div className="hero-recent-grid">
-            {recentNews.posts.map((post, i) => (
+            {recentNews.map((post, i) => (
               <div className="fpg-card-style style-two" key={i}>
                 <div className="fpg-post-thumb">
                   <Link href={getHref(post)} className="image-link">
@@ -164,11 +200,11 @@ export default function Hero() {
                         href={getHref(post)}
                         className="post-cat"
                         style={{
-                          "--catCurrentBgColor": post.category.color,
+                          "--catCurrentBgColor": categoryColors[post.category] || "#f27100",
                           "--catCurrentColor": "#ffffff",
                         } as React.CSSProperties}
                       >
-                        {post.category.label}
+                        {post.categoryLabel}
                       </Link>
                     </div>
                     <h6 className="fpg-post-title">
@@ -181,7 +217,7 @@ export default function Hero() {
                         <span>
                           By{" "}
                           <span className="fpg-author-link">
-                            {post.author}
+                            {post.authorName}
                           </span>
                         </span>
                       </span>
@@ -195,6 +231,7 @@ export default function Hero() {
                 </div>
               </div>
             ))}
+            <InFeedNativeAd position="in-feed-1" cardStyle="hero-recent" />
           </div>
         </div>
       </div>

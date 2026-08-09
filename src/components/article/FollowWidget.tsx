@@ -1,4 +1,5 @@
 import Link from "next/link";
+import InFeedNativeAd from "@/components/ads/InFeedNativeAd";
 
 const socialIcons: Record<string, { path: string; viewBox: string }> = {
   facebook: {
@@ -92,6 +93,7 @@ export default function FollowWidget({
               </a>
             );
           })}
+          <InFeedNativeAd position="follow-native" cardStyle="social-card" pageType="article" />
         </div>
       </div>
     </div>

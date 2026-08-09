@@ -1,0 +1,7 @@
+[
+  { "slug": "hotels", "label": "Hotels", "color": "#e033e0", "count": 12 },
+  { "slug": "flights", "label": "Flights", "color": "#0073ff", "count": 5 },
+  { "slug": "destinations", "label": "Destinations", "color": "#54bd05", "count": 10 },
+  { "slug": "traveling", "label": "Traveling", "color": "#f27100", "count": 3 },
+  { "slug": "travel-intelligence", "label": "Travel Intelligence", "color": "#f27100", "count": 8 }
+]

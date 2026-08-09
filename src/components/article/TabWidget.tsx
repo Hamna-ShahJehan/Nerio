@@ -2,8 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import data from "@/data/data.json";
-import { generateSlug } from "@/lib/slug";
+
+interface Article {
+  slug: string;
+  title: string;
+  image?: string;
+  authorName: string;
+  views: number;
+}
+
+interface TabWidgetProps {
+  recentArticles?: Article[];
+  popularArticles?: Article[];
+  trendyArticles?: Article[];
+}
 
 type TabKey = "recent" | "popular" | "trendy";
 
@@ -13,13 +25,16 @@ const tabs: { key: TabKey; label: string }[] = [
   { key: "trendy", label: "Trendy" },
 ];
 
-function getHref(item: { href: string; title: string }) {
-  return item.href !== "#" ? item.href : `/${generateSlug(item.title)}`;
-}
-
-export default function TabWidget() {
+export default function TabWidget({ recentArticles = [], popularArticles = [], trendyArticles = [] }: TabWidgetProps) {
   const [activeTab, setActiveTab] = useState<TabKey>("recent");
-  const posts = data.topOfWeek.tabs[activeTab];
+
+  const tabData: Record<TabKey, Article[]> = {
+    recent: recentArticles,
+    popular: popularArticles,
+    trendy: trendyArticles,
+  };
+
+  const posts = tabData[activeTab];
 
   return (
     <div className="border border-border rounded-[10px] p-[20px_20px_10px] bg-white">
@@ -41,7 +56,7 @@ export default function TabWidget() {
       <div>
         {posts.map((post, i) => (
           <div key={i} className="flex items-center gap-[16px] py-[15px] group">
-            <Link href={getHref(post)} className="w-[85px] h-[85px] rounded-full overflow-hidden flex-shrink-0">
+            <Link href={`/${post.slug}`} className="w-[85px] h-[85px] rounded-full overflow-hidden flex-shrink-0">
               <img
                 src={post.image}
                 alt={post.title}
@@ -50,12 +65,12 @@ export default function TabWidget() {
             </Link>
             <div className="flex-1 min-w-0">
               <h6 className="text-[16px] font-normal text-black leading-[1.35] line-clamp-2 group-hover:text-primary transition-colors">
-                <Link href={getHref(post)}>{post.title}</Link>
+                <Link href={`/${post.slug}`}>{post.title}</Link>
               </h6>
               <ul className="fpg-post-meta flex flex-wrap items-center gap-[12px] mt-[10px] text-[13px] text-bodyColor">
                 <li>
                   <span className="fpg-meta flex items-center flex-wrap gap-[8px]">
-                    <span>By {post.author}</span>
+                    <span>By {post.authorName}</span>
                   </span>
                 </li>
                 <li className="flex items-center gap-[4px]">

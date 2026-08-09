@@ -1,80 +1,82 @@
 "use client";
 
-import FeaturedImage from "./article/FeaturedImage";
-import ArticleTitle from "./article/ArticleTitle";
-import PostMeta from "./article/PostMeta";
-import ArticleBody from "./article/ArticleBody";
-import TagsAndShare from "./article/TagsAndShare";
-import AuthorBox from "./article/AuthorBox";
-import PostNavigation from "./article/PostNavigation";
-import CommentForm from "./article/CommentForm";
-import RelatedPosts from "./article/RelatedPosts";
-import Sidebar from "./article/Sidebar";
+import FeaturedImage from "@/components/article/FeaturedImage";
+import ArticleTitle from "@/components/article/ArticleTitle";
+import PostMeta from "@/components/article/PostMeta";
+import ArticleBody from "@/components/article/ArticleBody";
+import TagsAndShare from "@/components/article/TagsAndShare";
+import AuthorBox from "@/components/article/AuthorBox";
+import PostNavigation from "@/components/article/PostNavigation";
+import CommentForm from "@/components/article/CommentForm";
+import RelatedPosts from "@/components/article/RelatedPosts";
+import TabWidget from "@/components/article/TabWidget";
+import CategoriesWidget from "@/components/article/CategoriesWidget";
+import FollowWidget from "@/components/article/FollowWidget";
+import TagsWidget from "@/components/article/TagsWidget";
+import SearchWidget from "@/components/article/SearchWidget";
+import AdSlot from "@/components/ui/AdSlot";
 
-interface ContentBlock {
-  type: string;
-  text?: string;
-  src?: string;
-  images?: string[];
-  author?: string;
-  items?: string[];
+interface ArticleTemplateProps {
+  article: any;
+  related: any[];
+  categories: any[];
+  trending: any[];
+  recent: any[];
 }
 
-interface Article {
-  slug: string;
-  title: string;
-  category: { label: string; color: string };
-  author: {
-    name: string;
-    avatar: string;
-    bio: string;
-  };
-  date: string;
-  views: string;
-  comments: string;
-  featuredImage: string;
-  content: ContentBlock[];
-  tags: string[];
-  prevPost: { slug: string; title: string; image: string };
-  nextPost: { slug: string; title: string; image: string };
-}
+export default function ArticleTemplate({ article, related, categories, trending, recent }: ArticleTemplateProps) {
+  if (!article) return null;
 
-interface SidebarData {
-  categories: { name: string; count: number; href: string; image?: string }[];
-  socialCards: { name: string; followers: string; color: string; icon: string }[];
-  tags: string[];
-}
+  const sidebarCategories = (categories || []).map((c: any) => ({
+    name: c.name || c.label || "",
+    count: c.count || 0,
+    href: `/category/${c.slug || c.name?.toLowerCase().replace(/\s+/g, "-")}`,
+    image: c.image || "",
+  }));
 
-interface ArticlePageProps {
-  article: Article;
-  sidebar: SidebarData;
-  relatedArticles: Article[];
-}
-
-export default function ArticlePage({ article, sidebar, relatedArticles }: ArticlePageProps) {
   return (
     <div className="nerio-container has-sidebar py-[80px]">
+      <AdSlot pageType="article" position="top-leaderboard" articleSlug={article.slug} />
       <div className="flex flex-col lg:flex-row gap-[30px] items-start">
         <div className="w-full lg:w-[67%] min-w-0">
-          <FeaturedImage src={article.featuredImage} alt={article.title} />
+          <FeaturedImage src={article.articleMedia?.heroCoverMedia?.url || article.featuredImage} alt={article.title} />
           <ArticleTitle title={article.title} />
           <PostMeta
-            author={article.author}
-            date={article.date}
-            category={article.category}
-            comments={article.comments}
+            author={{ name: article.authorName || "Admin", avatar: article.authorAvatar || "" }}
+            date={article.date || article.createdAt}
+            category={{ label: article.categoryLabel || article.category, color: article.categoryColor || "#f27100" }}
+            comments={String(article.comments?.length || 0)}
           />
+          <AdSlot pageType="article" position="atf-rectangle" articleSlug={article.slug} />
           <ArticleBody content={article.content} />
-          <TagsAndShare tags={article.tags} />
-          <AuthorBox author={article.author} />
-          <PostNavigation prevPost={article.prevPost} nextPost={article.nextPost} />
+          <TagsAndShare tags={article.tags || []} />
+          <AuthorBox author={{ name: article.authorName || "Admin", avatar: article.authorAvatar || "", bio: article.authorBio || "" }} />
+          <PostNavigation
+            prevPost={article.prevPost || { slug: "", title: "", image: "" }}
+            nextPost={article.nextPost || { slug: "", title: "", image: "" }}
+          />
           <CommentForm />
-          <RelatedPosts articles={relatedArticles} />
+          <RelatedPosts articles={related || []} />
+          <AdSlot pageType="article" position="bottom-leaderboard" articleSlug={article.slug} />
         </div>
-        <aside className="w-full lg:w-[33%] sticky top-[100px]">
-          <Sidebar data={sidebar} />
+        <aside className="w-full lg:w-[33%] sticky top-[100px] space-y-[30px]">
+          <SearchWidget />
+          <TabWidget
+            recentArticles={recent || []}
+            popularArticles={trending || []}
+            trendyArticles={trending || []}
+          />
+          <CategoriesWidget categories={sidebarCategories} />
+          <FollowWidget socialCards={[
+            { name: "Facebook", followers: "Follow Us", color: "#0073FF", icon: "facebook" },
+            { name: "Twitter", followers: "Follow Us", color: "#121213", icon: "twitter" },
+            { name: "Instagram", followers: "Follow Us", color: "linear-gradient(29deg, #BE08AF 0%, #F10811 100%)", icon: "instagram" },
+            { name: "LinkedIn", followers: "Follow Us", color: "#0077B5", icon: "linkedin" },
+          ]} />
+          <TagsWidget tags={article.tags || []} />
         </aside>
       </div>
+      <AdSlot pageType="article" position="sticky-footer" articleSlug={article.slug} />
     </div>
   );
 }

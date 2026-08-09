@@ -5,7 +5,7 @@ export default function FeaturedImage({ src, alt }: { src: string; alt: string }
       <img
         src={src}
         alt={alt}
-        className="w-full h-auto object-cover"
+        className="w-full h-150 object-cover"
       />
     </div>
   );

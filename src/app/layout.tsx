@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import StickySidebar from "@/components/StickySidebar";
+import { QueryProvider } from "@/components/providers/query-provider";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -26,7 +27,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" />
       </head>
       <body className="min-h-screen flex flex-col font-body antialiased">
-        {children}
+        <QueryProvider>
+          {children}
+        </QueryProvider>
         <StickySidebar />
       </body>
     </html>

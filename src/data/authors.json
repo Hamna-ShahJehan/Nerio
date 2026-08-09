@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "matt-rosnor",
+    "name": "Matt Rosnor",
+    "role": "Senior Travel Writer",
+    "bio": "Matt Rosnor is a senior travel writer covering luxury hotels, resorts, airlines, destinations, and hospitality trends across the globe. With over a decade of experience, he brings insightful reviews and in-depth analysis to every story.",
+    "avatar": "/assets/images/article/tm-img0041-500x500.jpg",
+    "credentials": {
+      "experience": "15+ years in travel journalism",
+      "specializations": ["Hotels", "Flights", "Destinations", "Travel Intelligence"],
+      "education": "M.A. Journalism, Columbia University",
+      "previousPublications": ["Condé Nast Traveler", "Travel + Leisure", "Lonely Planet"],
+      "linkedin": "https://linkedin.com/in/mattrosnor",
+      "verified": true
+    },
+    "social": {
+      "twitter": "https://twitter.com/mattrosnor",
+      "linkedin": "https://linkedin.com/in/mattrosnor"
+    }
+  }
+]

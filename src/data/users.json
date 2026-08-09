@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Admin User",
+    "email": "admin@cockpit.travel",
+    "passwordHash": "$2a$12$u8iZV/7aL/2MqIOWwO.3lebQo0TI04CjkM.RrtFl1dyi/b.9DolZO",
+    "roles": ["admin", "editor", "author"],
+    "isActive": true,
+    "invitationTokenHash": null,
+    "invitationExpiresAt": null,
+    "bearertoken": "",
+    "avatarUrl": ""
+  }
+]

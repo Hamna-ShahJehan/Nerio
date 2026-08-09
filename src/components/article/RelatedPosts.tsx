@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
+import InFeedNativeAd from "@/components/ads/InFeedNativeAd";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -108,6 +109,9 @@ export default function RelatedPosts({ articles }: { articles: RelatedArticle[] 
               </SwiperSlide>
             );
           })}
+          <SwiperSlide className="h-auto">
+            <InFeedNativeAd position="in-feed-related" cardStyle="related-articles" pageType="article" />
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>

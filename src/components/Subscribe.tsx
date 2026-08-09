@@ -1,17 +1,13 @@
 "use client";
 
-import data from "@/data/data.json";
-
-const {
-  heading,
-  placeholder,
-  buttonText,
-  consentText,
-  termsLink,
-  termsText,
-} = data.subscribe;
-
 export default function Subscribe() {
+  const heading = "Subscribe to our newsletter";
+  const placeholder = "Enter your email";
+  const buttonText = "Subscribe";
+  const consentText = "I agree to the";
+  const termsLink = "/terms-of-service";
+  const termsText = "Terms & Conditions";
+
   return (
     <section className="pb-[80px] bg-white">
       <div className="nerio-container">
@@ -22,7 +18,6 @@ export default function Subscribe() {
               "radial-gradient(circle at left,#2b506f 0%,#14284b 45%,#08111f 100%)",
           }}
         >
-          {/* Decorative dots */}
           <div
             className="hidden lg:block absolute top-[35px] right-[420px] w-[90px] h-[55px] opacity-40"
             style={{
@@ -32,35 +27,25 @@ export default function Subscribe() {
             }}
           />
 
-          {/* Main Content */}
           <div className="relative z-[2] flex items-center justify-between px-[24px] md:px-[40px] py-[38px]">
-
-            {/* Left Content */}
             <div className="w-full max-w-[470px] relative z-10">
-
               <h3 className="text-white text-[22px] md:text-[24px] font-bold leading-none mb-[22px]">
                 {heading}
               </h3>
 
               <form onSubmit={(e) => e.preventDefault()}>
-
-                {/* Input */}
                 <div className="relative flex items-center bg-white rounded-[8px] shadow-lg h-[58px] p-[4px]">
-
                   <input
                     type="email"
                     required
                     placeholder={placeholder}
                     className="w-full h-full bg-transparent outline-none border-none pl-[18px] pr-[150px] text-[15px] text-[#1f2937] placeholder:text-[#9b9b9b]"
                   />
-
                   <button
                     type="submit"
                     className="absolute right-[4px] top-[4px] bottom-[4px] px-[26px] rounded-[6px] bg-[#0d6efd] hover:bg-[#0052cc] transition-all duration-300 inline-flex items-center justify-center gap-2 text-white font-medium text-[15px]"
                   >
                     <span>{buttonText}</span>
-
-                    {/* Arrow */}
                     <span className="inline-flex items-center overflow-hidden w-[16px] h-[16px] relative">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -77,15 +62,12 @@ export default function Subscribe() {
                   </button>
                 </div>
 
-                {/* Checkbox */}
                 <label className="flex items-center gap-[8px] mt-[16px] text-white text-[14px] cursor-pointer select-none">
-
                   <input
                     type="checkbox"
                     required
                     className="w-[15px] h-[15px] rounded-[3px] border border-white/50 bg-transparent accent-[#0d6efd]"
                   />
-
                   <span>
                     {consentText}{" "}
                     <a
@@ -96,21 +78,16 @@ export default function Subscribe() {
                     </a>
                   </span>
                 </label>
-
               </form>
             </div>
 
-            {/* Right Image */}
             <div className="hidden md:block absolute inset-y-0 right-0 w-[60%] overflow-hidden pointer-events-none">
-
               <img
                 src="/assets/images/subscribe/cta-thumb-01.png"
                 alt=""
                 className="absolute right-[-15px] top-1/2 -translate-y-1/2 w-[720px] max-w-none object-contain"
               />
-
             </div>
-
           </div>
         </div>
       </div>
